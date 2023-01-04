@@ -8,7 +8,11 @@
 
 </head>
 <body>
-<form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register">
+
+    <button type="submit" name="Login" onclick='showLogin()'>Login</button>
+    <button type="submit" name="Register" onclick='showRegister()'>Register</button>
+
+    <form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register">
     <div class="container">
         <center>  <h1> Registration Form</h1> </center>
 
@@ -451,5 +455,8 @@
         </div>
     </div>
 </form>
+
+
+
 </body>
 </html>
