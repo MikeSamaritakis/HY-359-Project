@@ -119,6 +119,7 @@ public class Register extends HttpServlet {
             }
         }
 
+        writer.println("Registration was successful here are your data:");
         writer.println("Username: ");
         writer.println(username);
         writer.println("Email: ");
@@ -129,6 +130,8 @@ public class Register extends HttpServlet {
         writer.println(firstname);
         writer.println("Last Name: ");
         writer.println(lastname);
+        writer.println("To log into your account go to the previous page and use the Login button!");
+
         writer.flush();
 
         writer.close();
