@@ -3,16 +3,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <meta charset="ISO-8859-1">
-  <style>ex1.css</style>
-  <script>ex1.js</script>
+  <link rel="stylesheet" href="ex1.css">
+  <script src="ex1.js"></script>
 
 </head>
 <body>
 
-<button type="submit" name="Login" onclick='showLogin()'>Login</button>
-<button type="submit" name="Register" onclick='showRegister()'>Register</button>
+<div class="logreg">
+  <center>  <h1> Login/Register</h1> </center>
+  <hr>
+  <div class="buttons">
+  <button type="submit" name="Login" onclick='showLogin()'>Login</button>
+  <button type="submit" name="Register" onclick='showRegister()'>Register</button>
+  </div>
+</div>
 
-<form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register">
+<form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register" style="display: none">
   <div class="container">
     <center>  <h1> Registration Form</h1> </center>
 
@@ -456,7 +462,72 @@
   </div>
 </form>
 
+<form id="AdminLoginForm" method="get" action="AdminGuest" style="display: none">
+  <div class="container">
+    <center>  <h1> Login Form</h1> </center>
 
+    <hr>
+    <div class="pad">
+      <label><b> Username :</b></label>
+      <input type="text" name="Username" placeholder= "Username" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" required minlength="8"/>
+    </div>
+
+    <div class="pad">
+      <label><b> Password : </b></label>
+      <input type = "password" placeholder="Password" name="Password" required minlength="8" maxlength="12" value = ""/>
+    </div>
+
+    </div>
+</form>
+
+<form id="GuestLoginForm" method="post" action="AdminGuest" style="display: none">
+  <div class="container">
+    <center>  <h1> Login Form</h1> </center>
+
+    <hr>
+    <div class="pad">
+      <label><b> Name :</b></label>
+      <input type="text" name="Name" placeholder= "Insert temporary Name" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" required minlength="8"/>
+    </div>
+
+  </div>
+</form>
+
+<form id="StudentLoginForm" method="get" action="StudentLibrarian" style="display: none">
+  <div class="container">
+    <center>  <h1> Login Form</h1> </center>
+
+    <hr>
+    <div class="pad">
+      <label><b> Username :</b></label>
+      <input type="text" name="Username" placeholder= "Username" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" required minlength="8"/>
+    </div>
+
+    <div class="pad">
+      <label><b> Password : </b></label>
+      <input type = "password" placeholder="Password" name="Password" required minlength="8" maxlength="12" value = ""/>
+    </div>
+
+  </div>
+</form>
+
+<form id="LibrarianLoginForm" method="post" action="Admin" style="display: none">
+  <div class="container">
+    <center>  <h1> Login Form</h1> </center>
+
+    <hr>
+    <div class="pad">
+      <label><b> Username :</b></label>
+      <input type="text" name="Username" placeholder= "Username" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" required minlength="8"/>
+    </div>
+
+    <div class="pad">
+      <label><b> Password : </b></label>
+      <input type = "password" placeholder="Password" name="Password" required minlength="8" maxlength="12" value = ""/>
+    </div>
+
+  </div>
+</form>
 
 </body>
 </html>
