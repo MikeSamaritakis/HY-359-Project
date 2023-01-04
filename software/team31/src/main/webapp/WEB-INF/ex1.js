@@ -13,6 +13,30 @@
         }
     }
 
+    function showLogin(){
+        document.getElementById("ChooseLogin").style.display = "block";
+    }
+
+    function showRegister(){
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function showAdminLogin(){
+        document.getElementById("AdminLoginForm").style.display = "block";
+    }
+
+    function showGuestLogin(){
+        document.getElementById("GuestLoginForm").style.display = "block";
+    }
+
+    function showStudentLogin(){
+        document.getElementById("StudentLoginForm").style.display = "block";
+    }
+
+    function showLibrarianLogin(){
+        document.getElementById("LibrarianLoginForm").style.display = "block";
+    }
+
     function Mismatch() {
         var pw1 = document.getElementById("myInput1").value;
         var pw2 = document.getElementById("myInput2").value;
@@ -89,7 +113,5 @@
         }
     }
 
-    function showLogin(){
 
-    }
 
