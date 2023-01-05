@@ -14,7 +14,7 @@
     <hr>
     <div class="buttonslogreg">
         <button type="submit" name="Login" onclick='showLogin()'>Login</button>
-        <button type="submit" name="Register" onclick='showRegister()'>Servlets.Register</button>
+        <button type="submit" name="Register" onclick='showRegister()'>Register</button>
     </div>
 </div>
 
