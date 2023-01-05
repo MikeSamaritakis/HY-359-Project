@@ -482,12 +482,12 @@
         <hr>
         <div class="pad">
             <label><b> Username :</b></label>
-            <input type="text" name="username" placeholder= "Username" size="15" required minlength="8"/>
+            <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
         </div>
 
         <div class="pad">
             <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="password" required minlength="8" maxlength="12" value = ""/>
+            <input type = "password" placeholder="Password" name="loginpassword" required minlength="8" maxlength="12" value = ""/>
         </div>
         <div class="marg">
             <button type="submit" class="regbtn" value="Call Servlet">Login as Admin</button>
@@ -502,7 +502,7 @@
         <hr>
         <div class="pad">
             <label><b> Name :</b></label>
-            <input type="text" name="username" placeholder= "Insert temporary Name" size="15" required minlength="8"/>
+            <input type="text" name="loginusername" placeholder= "Insert temporary Name" size="15" required minlength="8"/>
         </div>
         <div class="marg">
             <button type="submit" class="regbtn" value="Call Servlet">Login as Guest </button>
@@ -517,12 +517,12 @@
         <hr>
         <div class="pad">
             <label><b> Username :</b></label>
-            <input type="text" name="username" placeholder= "Username" size="15" required minlength="8"/>
+            <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
         </div>
 
         <div class="pad">
             <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="password" required minlength="8" maxlength="12" value = ""/>
+            <input type = "password" placeholder="Password" name="loginpassword" required minlength="8" maxlength="12" value = ""/>
         </div>
         <div class="marg">
             <button type="submit" class="regbtn" value="Call Servlet">Login as Student</button>
@@ -537,12 +537,12 @@
         <hr>
         <div class="pad">
             <label><b> Username :</b></label>
-            <input type="text" name="username" placeholder= "Username" size="15" required minlength="8"/>
+            <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
         </div>
 
         <div class="pad">
             <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="password" required minlength="8" maxlength="12" value = ""/>
+            <input type = "password" placeholder="Password" name="loginpassword" required minlength="8" maxlength="12" value = ""/>
         </div>
         <div class="marg">
             <button type="submit" class="regbtn" value="Call Servlet">Login as Librarian</button>

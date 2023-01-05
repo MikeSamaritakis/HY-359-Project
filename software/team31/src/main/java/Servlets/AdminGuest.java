@@ -15,12 +15,13 @@ public class AdminGuest extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//adminlogin
-
+    //adminlogin
+    //use the dispatcher to redirect to welcome page if login is successful
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//guestlogin
+    //guestlogin
+    // use the dispatcher to redirect to welcome page if login is successful
     }
 }
