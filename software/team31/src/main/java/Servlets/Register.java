@@ -1,3 +1,5 @@
+package Servlets;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -9,7 +11,7 @@ import mainClasses.Student;
 import database.tables.EditStudentsTable;
 import database.tables.EditLibrarianTable;
 
-@WebServlet(name = "Register", value = "/Register")
+@WebServlet(name = "Servlets.Register", value = "/Servlets.Register")
 public class Register extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
@@ -73,6 +75,7 @@ public class Register extends HttpServlet {
             throw new RuntimeException(e);
         }
 
+        writer.println("Registration was successful here are your data:");
         writer.println("Username: ");
         writer.println(username);
         writer.println("Email: ");
@@ -83,6 +86,7 @@ public class Register extends HttpServlet {
         writer.println(firstname);
         writer.println("Last Name: ");
         writer.println(lastname);
+        writer.println("To log into your account go to the previous page and use the Login button!");
         writer.flush();
         writer.close();
 

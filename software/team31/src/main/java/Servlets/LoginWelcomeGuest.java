@@ -1,13 +1,15 @@
+package Servlets;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "LoginWelcomeLibrarian", value = "/LoginWelcomeLibrarian")
-public class LoginWelcomeLibrarian extends HttpServlet {
+@WebServlet(name = "Servlets.LoginWelcomeGuest", value = "/Servlets.LoginWelcomeGuest")
+public class LoginWelcomeGuest extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
-    public LoginWelcomeLibrarian(){
+    public LoginWelcomeGuest(){
         super();
     }
     @Override
