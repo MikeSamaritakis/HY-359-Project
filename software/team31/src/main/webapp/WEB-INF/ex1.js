@@ -19,23 +19,22 @@
         document.getElementById("GuestLoginForm").style.display = "none";
         document.getElementById("StudentLoginForm").style.display = "none";
         document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "block";
-        document.getElementsByName("LoginStudent").style.display = "block";
-        document.getElementsByName("LoginLibrarian").style.display = "block";
-        document.getElementsByName("LoginGuest").style.display = "block";
+        document.getElementById("LoginAdmin").style.display = "block";
+        document.getElementById("LoginStudent").style.display = "block";
+        document.getElementById("LoginLibrarian").style.display = "block";
+        document.getElementById("LoginGuest").style.display = "block";
     }
 
     function showRegister(){
         document.getElementById("myForm").style.display = "block";
         document.getElementById("AdminLoginForm").style.display = "none";
-        document.getElementById("myForm").style.display = "none";
         document.getElementById("GuestLoginForm").style.display = "none";
         document.getElementById("StudentLoginForm").style.display = "none";
         document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "none";
-        document.getElementsByName("LoginStudent").style.display = "none";
-        document.getElementsByName("LoginLibrarian").style.display = "none";
-        document.getElementsByName("LoginGuest").style.display = "none";
+        document.getElementById("LoginAdmin").style.display = "none";
+        document.getElementById("LoginStudent").style.display = "none";
+        document.getElementById("LoginLibrarian").style.display = "none";
+        document.getElementById("LoginGuest").style.display = "none";
 
     }
 
