@@ -14,6 +14,7 @@
     }
 
     function showLogin(){
+        document.getElementById("logintext").style.display = "block";
         document.getElementById("AdminLoginForm").style.display = "none";
         document.getElementById("myForm").style.display = "none";
         document.getElementById("GuestLoginForm").style.display = "none";
@@ -26,6 +27,7 @@
     }
 
     function showRegister(){
+        document.getElementById("logintext").style.display = "none";
         document.getElementById("myForm").style.display = "block";
         document.getElementById("AdminLoginForm").style.display = "none";
         document.getElementById("GuestLoginForm").style.display = "none";

@@ -10,7 +10,7 @@
 <body>
 
 <div class="logreg">
-    <center>  <h1> Login/Servlets.Register</h1> </center>
+    <center>  <h1> Login/Register</h1> </center>
     <hr>
     <div class="buttonslogreg">
         <button type="submit" name="Login" onclick='showLogin()'>Login</button>
@@ -19,15 +19,15 @@
 </div>
 
 <div class="log">
-    <center>  <h1> Login</h1> </center>
+    <center>  <h1 id="logintext" style="display: none" > Login </h1> </center>
 </div>
 <hr>
 <div class="log">
     <div class="buttonslog">
-        <button type="button" id="LoginAdmin" name="LoginAdmin" onclick='showAdminLogin()' style="display: block">Login as Admin</button>
-        <button type="button" id="LoginStudent" name="LoginStudent" onclick='showStudentLogin()' style="display: block">Login as Student</button>
-        <button type="button" id="LoginLibrarian" name="LoginLibrarian" onclick='showLibrarianLogin()' style="display: block">Login as Librarian</button>
-        <button type="button" id="LoginGuest" name="LoginGuest" onclick='showGuestLogin()' style="display: block">Login as Guest</button>
+        <button type="button" id="LoginAdmin" name="LoginAdmin" onclick='showAdminLogin()' style="display: none">Login as Admin</button>
+        <button type="button" id="LoginStudent" name="LoginStudent" onclick='showStudentLogin()' style="display: none">Login as Student</button>
+        <button type="button" id="LoginLibrarian" name="LoginLibrarian" onclick='showLibrarianLogin()' style="display: none">Login as Librarian</button>
+        <button type="button" id="LoginGuest" name="LoginGuest" onclick='showGuestLogin()' style="display: none">Login as Guest</button>
     </div>
 </div>
 
