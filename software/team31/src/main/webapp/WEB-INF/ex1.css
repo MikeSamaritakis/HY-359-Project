@@ -23,11 +23,24 @@
     margin: 0 auto;
   }
 
-  .buttons {
+  .buttonslogreg {
     text-align: center;
-    width: 200px;
+    width: 10%;
     margin: 0 auto;
-    display: inline
+    display: inline;
+  }
+
+  .log {
+    text-align: center;
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .buttonslog {
+    text-align: center;
+    width: 10%;
+    margin: 0 auto;
+
   }
 
   .container {  
