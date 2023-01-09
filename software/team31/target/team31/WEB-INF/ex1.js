@@ -14,78 +14,27 @@
     }
 
     function showLogin(){
-        document.getElementById("logintext").style.display = "block";
-        document.getElementById("AdminLoginForm").style.display = "none";
-        document.getElementById("myForm").style.display = "none";
-        document.getElementById("GuestLoginForm").style.display = "none";
-        document.getElementById("StudentLoginForm").style.display = "none";
-        document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementById("LoginAdmin").style.display = "block";
-        document.getElementById("LoginStudent").style.display = "block";
-        document.getElementById("LoginLibrarian").style.display = "block";
-        document.getElementById("LoginGuest").style.display = "block";
+        document.getElementById("ChooseLogin").style.display = "block";
     }
 
     function showRegister(){
-        document.getElementById("logintext").style.display = "none";
         document.getElementById("myForm").style.display = "block";
-        document.getElementById("AdminLoginForm").style.display = "none";
-        document.getElementById("GuestLoginForm").style.display = "none";
-        document.getElementById("StudentLoginForm").style.display = "none";
-        document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementById("LoginAdmin").style.display = "none";
-        document.getElementById("LoginStudent").style.display = "none";
-        document.getElementById("LoginLibrarian").style.display = "none";
-        document.getElementById("LoginGuest").style.display = "none";
-
     }
 
     function showAdminLogin(){
         document.getElementById("AdminLoginForm").style.display = "block";
-        document.getElementById("myForm").style.display = "none";
-        document.getElementById("GuestLoginForm").style.display = "none";
-        document.getElementById("StudentLoginForm").style.display = "none";
-        document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "none";
-        document.getElementsByName("LoginStudent").style.display = "none";
-        document.getElementsByName("LoginLibrarian").style.display = "none";
-        document.getElementsByName("LoginGuest").style.display = "none";
     }
 
     function showGuestLogin(){
         document.getElementById("GuestLoginForm").style.display = "block";
-        document.getElementById("AdminLoginForm").style.display = "none";
-        document.getElementById("myForm").style.display = "none";
-        document.getElementById("StudentLoginForm").style.display = "none";
-        document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "none";
-        document.getElementsByName("LoginStudent").style.display = "none";
-        document.getElementsByName("LoginLibrarian").style.display = "none";
-        document.getElementsByName("LoginGuest").style.display = "none";
     }
 
     function showStudentLogin(){
         document.getElementById("StudentLoginForm").style.display = "block";
-        document.getElementById("AdminLoginForm").style.display = "none";
-        document.getElementById("myForm").style.display = "none";
-        document.getElementById("GuestLoginForm").style.display = "none";
-        document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "none";
-        document.getElementsByName("LoginStudent").style.display = "none";
-        document.getElementsByName("LoginLibrarian").style.display = "none";
-        document.getElementsByName("LoginGuest").style.display = "none";
     }
 
     function showLibrarianLogin(){
         document.getElementById("LibrarianLoginForm").style.display = "block";
-        document.getElementById("AdminLoginForm").style.display = "none";
-        document.getElementById("myForm").style.display = "none";
-        document.getElementById("GuestLoginForm").style.display = "none";
-        document.getElementById("StudentLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "none";
-        document.getElementsByName("LoginStudent").style.display = "none";
-        document.getElementsByName("LoginLibrarian").style.display = "none";
-        document.getElementsByName("LoginGuest").style.display = "none";
     }
 
     function Mismatch() {

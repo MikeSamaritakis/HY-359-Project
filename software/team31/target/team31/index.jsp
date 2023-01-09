@@ -9,29 +9,10 @@
 </head>
 <body>
 
-<div class="logreg">
-    <center>  <h1> Login/Register</h1> </center>
-    <hr>
-    <div class="buttonslogreg">
-        <button type="submit" name="Login" onclick='showLogin()'>Login</button>
-        <button type="submit" name="Register" onclick='showRegister()'>Register</button>
-    </div>
-</div>
+    <button type="submit" name="Login" onclick='showLogin()'>Login</button>
+    <button type="submit" name="Register" onclick='showRegister()'>Register</button>
 
-<div class="log">
-    <center>  <h1 id="logintext" style="display: none" > Login </h1> </center>
-</div>
-<hr>
-<div class="log">
-    <div class="buttonslog">
-        <button type="button" id="LoginAdmin" name="LoginAdmin" onclick='showAdminLogin()' style="display: none">Login as Admin</button>
-        <button type="button" id="LoginStudent" name="LoginStudent" onclick='showStudentLogin()' style="display: none">Login as Student</button>
-        <button type="button" id="LoginLibrarian" name="LoginLibrarian" onclick='showLibrarianLogin()' style="display: none">Login as Librarian</button>
-        <button type="button" id="LoginGuest" name="LoginGuest" onclick='showGuestLogin()' style="display: none">Login as Guest</button>
-    </div>
-</div>
-
-<form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register" style="display: none">
+    <form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register">
     <div class="container">
         <center>  <h1> Registration Form</h1> </center>
 
@@ -470,85 +451,12 @@
         </div>
 
         <div class="marg">
-            <button type="submit" onclick="return PassForm()" class="regbtn" value="Call Servlet">Servlets.Register </button>
+            <button type="submit" onclick="return PassForm()" class="regbtn" value="Call Servlet">Register </button>
         </div>
     </div>
 </form>
 
-<form id="AdminLoginForm" method="get" action="AdminGuest" style="display: none">
-    <div class="container">
-        <center>  <h1> Login Form</h1> </center>
 
-        <hr>
-        <div class="pad">
-            <label><b> Username :</b></label>
-            <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
-        </div>
-
-        <div class="pad">
-            <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="loginpassword" required minlength="8" maxlength="12" value = ""/>
-        </div>
-        <div class="marg">
-            <button type="submit" class="regbtn" value="Call Servlet">Login as Admin</button>
-        </div>
-    </div>
-</form>
-
-<form id="GuestLoginForm" method="post" action="AdminGuest" style="display: none">
-    <div class="container">
-        <center>  <h1> Login Form</h1> </center>
-
-        <hr>
-        <div class="pad">
-            <label><b> Name :</b></label>
-            <input type="text" name="loginusername" placeholder= "Insert temporary Name" size="15" required minlength="8"/>
-        </div>
-        <div class="marg">
-            <button type="submit" class="regbtn" value="Call Servlet">Login as Guest </button>
-        </div>
-    </div>
-</form>
-
-<form id="StudentLoginForm" method="get" action="StudentLibrarian" style="display: none">
-    <div class="container">
-        <center>  <h1> Login Form</h1> </center>
-
-        <hr>
-        <div class="pad">
-            <label><b> Username :</b></label>
-            <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
-        </div>
-
-        <div class="pad">
-            <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="loginpassword" required minlength="8" maxlength="12" value = ""/>
-        </div>
-        <div class="marg">
-            <button type="submit" class="regbtn" value="Call Servlet">Login as Student</button>
-        </div>
-    </div>
-</form>
-
-<form id="LibrarianLoginForm" method="post" action="StudentLibrarian" style="display: none">
-    <div class="container">
-        <center>  <h1> Login Form</h1> </center>
-
-        <hr>
-        <div class="pad">
-            <label><b> Username :</b></label>
-            <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
-        </div>
-
-        <div class="pad">
-            <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="loginpassword" required minlength="8" maxlength="12" value = ""/>
-        </div>
-        <div class="marg">
-            <button type="submit" class="regbtn" value="Call Servlet">Login as Librarian</button>
-        </div>
-    </div>
-</form>
 
 </body>
 </html>
