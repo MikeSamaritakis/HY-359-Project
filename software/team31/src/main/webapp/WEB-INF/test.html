@@ -10,22 +10,19 @@
 <body>
 
 <div class="logreg">
-  <center>  <h1> Login/Register</h1> </center>
+  <center><h1> Login/Register</h1> </center>
   <hr>
   <div class="buttonslogreg">
-    <button class="buttonlogreg" type="submit" name="Login" onclick='showLogin()' style="margin:5px;">Login</button>
-    <button class="buttonlogreg" type="submit" name="Register" onclick='showRegister()' style="margin:5px;">Register</button>
+    <button class="buttonlogreg" type="submit" name="Login" onclick='showLogin()'>Login</button>
+    <button class="buttonlogreg" type="submit" name="Register" onclick='showRegister()'>Register</button>
+
+  <center><h1 id="logintext" style="display: none"> Login as</h1> </center>
+
+    <center><button class="buttonlogreg" type="button" id="LoginAdmin" name="LoginAdmin" onclick='showAdminLogin()' style="display: none">Admin</button>
+    <button class="buttonlogreg" type="button" id="LoginStudent" name="LoginStudent" onclick='showStudentLogin()' style="display: none">Student</button>
+    <button class="buttonlogreg" type="button" id="LoginLibrarian" name="LoginLibrarian" onclick='showLibrarianLogin()' style="display: none">Librarian</button>
+    <button class="buttonlogreg" type="button" id="LoginGuest" name="LoginGuest" onclick='showGuestLogin()' style="display: none">Guest</button> </center>
   </div>
-
-  <center>  <h1 id="logintext" style="display: none" > Login as</h1> </center>
-
-  <div class="buttonslog">
-    <button class="buttonlog" type="button" id="LoginAdmin" name="LoginAdmin" onclick='showAdminLogin()' style="display: none">Admin</button>
-    <button class="buttonlog" type="button" id="LoginStudent" name="LoginStudent" onclick='showStudentLogin()' style="display: none">Student</button>
-    <button class="buttonlog" type="button" id="LoginLibrarian" name="LoginLibrarian" onclick='showLibrarianLogin()' style="display: none">Librarian</button>
-    <button class="buttonlog" type="button" id="LoginGuest" name="LoginGuest" onclick='showGuestLogin()' style="display: none">Guest</button>
-  </div>
-
 
 <form id="myForm" onsubmit ="return Mismatch()" method="post" action="/Register" style="display: none">
   <div class="container">
