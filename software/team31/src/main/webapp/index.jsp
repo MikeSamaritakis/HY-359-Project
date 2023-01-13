@@ -482,12 +482,12 @@
         <hr>
         <div class="pad">
             <label><b> Username :</b></label>
-            <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
+            <input type="text" name="loginadminusername" placeholder= "Username" size="15" required/>
         </div>
 
         <div class="pad">
             <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="loginpassword" id="myInput3" required minlength="8" maxlength="12" value = ""/>
+            <input type = "password" placeholder="Password" name="loginadminpassword" id="myInput3" required minlength="8" maxlength="12" value = ""/>
             <input type="checkbox" onclick="ShowPass3()">Show Password <br>
         </div>
         <div class="marg">
