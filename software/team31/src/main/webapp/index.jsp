@@ -487,7 +487,8 @@
 
         <div class="pad">
             <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="loginpassword" required minlength="8" maxlength="12" value = ""/>
+            <input type = "password" placeholder="Password" name="loginpassword" id="myInput3" required minlength="8" maxlength="12" value = ""/>
+            <input type="checkbox" onclick="ShowPass3()">Show Password <br>
         </div>
         <div class="marg">
             <button type="submit" class="regbtn" value="Call Servlet">Login as Admin</button>
@@ -522,7 +523,8 @@
 
         <div class="pad">
             <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="loginpassword" required minlength="8" maxlength="12" value = ""/>
+            <input type = "password" placeholder="Password" name="loginpassword" id="myInput4" required minlength="8" maxlength="12" value = ""/>
+            <input type="checkbox" onclick="ShowPass4()">Show Password <br>
         </div>
         <div class="marg">
             <button type="submit" class="regbtn" value="Call Servlet">Login as Student</button>
@@ -542,13 +544,16 @@
 
         <div class="pad">
             <label><b> Password : </b></label>
-            <input type = "password" placeholder="Password" name="loginpassword" required minlength="8" maxlength="12" value = ""/>
+            <input type = "password" placeholder="Password" name="loginpassword" id="myInput5" required minlength="8" maxlength="12" value = ""/>
+            <input type="checkbox" onclick="ShowPass5()">Show Password <br>
         </div>
         <div class="marg">
             <button type="submit" class="regbtn" value="Call Servlet">Login as Librarian</button>
         </div>
     </div>
 </form>
+
+
 
 </body>
 </html>

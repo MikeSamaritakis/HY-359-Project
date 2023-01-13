@@ -164,5 +164,32 @@
         }
     }
 
+    function ShowPass3() {
+        var x = document.getElementById("myInput3");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+
+    function ShowPass4() {
+        var x = document.getElementById("myInput4");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+
+    function ShowPass5() {
+        var x = document.getElementById("myInput5");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+
 
 
