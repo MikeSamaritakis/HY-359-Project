@@ -43,6 +43,27 @@ public class StudentLibrarian extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //student
+        PrintWriter writer = response.getWriter();
+
+        String username = request.getParameter("USERNAME");
+        String password = request.getParameter("PASSWORD");
+
+        writer.println(username);
+        writer.println(password);
+
+//        Student p = new Student();
+//        try {
+//            p = EditStudentsTable.databaseToStudent(username,password);
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        } catch (ClassNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//        String un = p.getUsername();
+//        writer.println(un);
+
+        writer.close();
     }
 
     @Override
