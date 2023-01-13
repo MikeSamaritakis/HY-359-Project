@@ -33,7 +33,7 @@ import java.util.logging.*;
 import com.google.gson.JsonObject;
 import java.sql.*;
 
-@WebServlet(name = "Servlets.StudentLibrarian", value = "/Servlets.StudentLibrarian")
+@WebServlet("/StudentLibrarian")
 public class StudentLibrarian extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
@@ -69,5 +69,26 @@ public class StudentLibrarian extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //librarian
+        PrintWriter writer = response.getWriter();
+
+        String username = request.getParameter("USERNAME");
+        String password = request.getParameter("PASSWORD");
+
+        writer.println(username);
+        writer.println(password);
+
+//        Student p = new Student();
+//        try {
+//            p = EditStudentsTable.databaseToStudent(username,password);
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        } catch (ClassNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//        String un = p.getUsername();
+//        writer.println(un);
+
+        writer.close();
     }
 }
