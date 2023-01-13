@@ -32,7 +32,7 @@
     <center>  <h1> Registration Form</h1> </center>
     <hr>
     <div class="pad">
-      <label style="margin-right: 90%;"><b> *Username :</b></label>
+      <label style="margin-right: 89.5%;"><b> *Username :</b></label>
       <input type="text" name="Username" placeholder= "Username" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" required minlength="8"/>
     </div>
 
@@ -44,59 +44,69 @@
     <div class="pad">
       <label style="margin-right: 85%;"><b> *Create Password :</b></label>
       <input type = "password" placeholder="Password" name="Password" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" required minlength="8" maxlength="12" value = "">
-      <input type="checkbox" onclick="ShowPass1()">Show Password <br>
-      <button onclick="PassStrength()"> see password strength </button>
+      <div style="margin-right: 85%;">
+        <input id="text1" type="checkbox" onclick="ShowPass1()">
+        <label for="text1"> Show Password</label>
+      </div>
+      <div class="showpmes">
+      <button class="border" onclick="PassStrength()"> see password's strength </button>
       <span id = "sw" style="color:red"> </span>
       <span id = "ss" style="color:rgb(85, 212, 0)"> </span>
       <span id = "sm" style="color:rgb(255, 141, 28)"> </span><br></br><br>
+      </div>
     </div>
 
     <div class="pad">
-      <label style="margin-right: 83%;"><b> *Confirm Password :</b></label>
+      <label style="margin-right: 83.5%;"><b> *Confirm Password :</b></label>
       <input type = "password" placeholder="Retype Password" name="psw-repeat" id="myInput2" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" required minlength="8" maxlength="12" value = "">
       <span id = "message1" style="color:red"> </span>
       <span id = "message4" style="color:red"> </span>
-      <input type="checkbox" onclick="ShowPass2()">Show Password<br><br>
+      <div style="margin-right: 85%;">
+        <input id="text2" type="checkbox" onclick="ShowPass2()">
+        <label for="text2"> Show Password</label>
+      </div>
     </div>
 
     <div class="pad">
-      <label> *Firstname :</label>
+      <label style="margin-right: 90%;"><b> *Firstname :</b></label>
       <input type="text" name="Firstname" placeholder= "Firstname" size="15" required minlength="3" maxlength="30"/>
     </div>
 
     <div class="pad">
-      <label> *Lastname :</label>
+      <label style="margin-right: 90%;"><b> *Lastname :</b></label>
       <input type="text" name="Lastname" placeholder="Lastname" size="15"required minlength="3" maxlength="30"/>
     </div>
 
     <div class="pad">
-      <label for="start" name="Birthdate">*Date :</label>
-      <input type="date" id="start" name="Birthdate"
+      <label style="margin-right: 94%;" for="start" name="Birthdate"><b>*Date :</b></label>
+      <div class="showpmes">
+      <input class="date" type="date" id="start" name="Birthdate"
              value="1980-01-01"
              min="1920-01-01" max="2006-12-31">
+        </div>
     </div>
 
     <div class="pad">
       <div>
-        <label required name="Gender">
-          *Gender :
-        </label><br>
+        <label required style="margin-right: 92%;"><b> *Gender :</b></label>
+        <div class="genders">
         <input type="radio" value="Male" name="Gender" checked > Male
         <input type="radio" value="Female" name="Gender"> Female
         <input type="radio" value="Other" name="Gender"> Other
+        </div>
       </div>
     </div>
 
     <div class="pad">
       <div>
-        <label required>
-          *User Type :
-        </label><br>
-        <select onchange='showElement(this.value)'>
+        <label required style="margin-right: 90%;"><b> *User Type :</b></label>
+        <div class="showpmes">
+        <select class="border" style="margin-right: 90%;" onchange='showElement(this.value)'>
           <option value="select">--Select--</option>
           <option value="student">Student</option>
           <option value="librarian">Library Manager</option>
         </select>
+      </div>
       </div>
     </div>
 
@@ -115,76 +125,69 @@
     <div id="student" style="display: none">
       <div class="pad">
         <div>
-          <label>
-            Student Type :
-          </label><br>
-          <select  name="Student_type">
+          <label style="margin-right: 88%;"><b> Student Type :</b></label>
+          <div class="showpmes">
+          <select style="margin-right: 90%;" class="border" name="Student_type">
             <option value="select">--Select--</option>
             <option value="Bachelor">Bachelor</option>
             <option value="Masters">Masters</option>
             <option value="PHD">PHD</option>
           </select>
         </div>
+        </div>
       </div>
 
       <div class="pad">
-        <label>
-          Pass Number :
-        </label><br>
-        <input type="number" name="Student_id" minlength="12" maxlength="12"><br><br>
+        <label style="margin-right: 88%;"><b> Pass Number :</b></label>
+        <input type="text" name="Student_id" minlength="12" maxlength="12" pattern="(?=.*[0-9]).{12,}"><br><br>
       </div>
 
       <div class="pad">
-        <label>
-          Pass start date :
-        </label><br>
-        <input type="date" id="start2" name="Student_id_from_date"
+        <label style="margin-right: 87%;"><b> Pass start date :</b></label>
+        <div class="showpmes">
+        <input style="margin-right: 87%;" class="border" type="date" id="start2" name="Student_id_from_date"
                value="2016-01-01"
                min="2016-01-01"><br></br>
       </div>
+      </div>
 
       <div class="pad">
-        <label>
-          Pass expiration date :
-        </label><br>
-        <input type="date" id="expiration" name="Student_id_to_date"
+        <label style="margin-right: 83%;"><b> Pass expiration date :</b></label>
+        <div class="showpmes">
+        <input style="margin-right: 87%;" class="border" type="date" id="expiration" name="Student_id_to_date"
                value="2023-01-01"
                min="2023-01-01"><br></br>
+      </div>
       </div>
 
       <div class="pad">
         <div>
-          <label>
-            University :
-          </label><br>
-          <select name="University">
+          <label style="margin-right: 90%;"><b> University :</b></label>
+          <div class="showpmes">
+          <select style="margin-right: 90%;" class="border" name="University">
             <option value="select">--Select--</option>
             <option value="UOC">UOC</option>
             <option value="HELMEPA">HELMEPA</option>
             <option value="TUC">TUC</option>
           </select>
         </div>
+        </div>
       </div>
 
       <div class="pad">
-        <label> Department :</label>
+        <label style="margin-right: 88.5%;"><b> Department :</b></label>
         <input type="text" name="Department" placeholder= "Department" size="15" minlength="3" maxlength="50"/>
       </div>
     </div>
 
     <div class="pad">
-      <label>
-        Personal URL :
-      </label><br>
-      <input type="url" id="personal url" name="Personalpage">
+      <label style="margin-right: 88%;"><b> Personal URL :</b></label>
+      <input class="border" style="margin-right: 88%;" type="url" id="personal url" name="Personalpage">
     </div>
 
     <div class="pad">
-      <div>
-        <label>
-          Country :
-        </label><br>
-        <select name="Country">
+        <label style="margin-right: 91.7%;"><b> Country :</b></label>
+        <select class="border" style="margin-right: 100%;"name="Country">
           <option value="Greece">Greece</option>
           <option value="Afghanistan">Afghanistan</option>
           <option value="Åland Islands">Åland Islands</option>
@@ -431,37 +434,31 @@
           <option value="Zambia">Zambia</option>
           <option value="Zimbabwe">Zimbabwe</option>
         </select>
-      </div>
     </div>
 
     <div class="pad">
-      <label>
-        City :
-      </label><br>
+      <label style="margin-right: 94.5%;"><b> City :</b></label>
       <input type="text" name="City" placeholder= "City" size="15" minlength="3" maxlength="50"/>
     </div>
 
     <div class="pad">
-      <label>
-        Address :
-      </label><br>
+      <label style="margin-right: 92%;"><b> Address :</b></label>
       <input type="text" name="Address" placeholder= "Address" size="15" minlength="5" maxlength="50"/>
     </div>
 
     <div class="pad">
-      <label>
-        Phone :
-      </label><br>
-      <input type="number" name="Telephone" placeholder="Phone" size="10" minlength="10" maxlength="14"> <br></br>
+      <label style="margin-right: 93%;"><b> Phone :</b></label>
+      <input class="border" style="margin-right: 100%;" type="text" name="Telephone" placeholder="Phone" size="10" minlength="10" maxlength="14" pattern="(?=.*[0-9]).{10,}"> <br></br>
     </div>
 
-
     <div class="pad">
-      <label style="color: blue">
+      <label class="terms" style="color: blue">
         *Terms and Conditions :
       </label><br>
-      <input type="checkbox" id="terms" name="Terms" value="terms" required>
-      <label for="Terms"> By clicking I agree with the terms and conditions</label><br>
+      <div style="margin-right: 60%;">
+        <input type="checkbox" id="terms" name="Terms" value="terms" required>
+        <label for="terms"> By clicking I agree with the terms and conditions</label>
+      </div>
     </div>
 
     <div class="marg">
@@ -558,6 +555,7 @@
   </div>
 </form>
 
+</div>
 </div>
 </body>
 </html>

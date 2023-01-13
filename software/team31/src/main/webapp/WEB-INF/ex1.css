@@ -3,7 +3,7 @@
     /*background-color: rgb(0, 0, 0);  */
   }  
     
-  input[type=text], input[type=password], textarea {  
+  input[type=text], input[type=password], textarea {
     width: 100%;  
     padding: 15px;  
     margin: 5px 0 22px 0;  
@@ -12,7 +12,7 @@
     background: #f1f1f1;  
   }
 
-  input[type=text]:focus, input[type=password]:focus {  
+  input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
     background-color: rgb(198, 198, 198);  
     outline: none;  
   }
@@ -107,9 +107,34 @@
 
   .email {
     margin-right: 90%;
-    background-color: #f1f1f1; color: black;
     border: 2px solid #f1f1f1;
     width: 100%;
     padding: 15px;
+    background-color: #f1f1f1; color: black;
+  }
+
+  .border {
+    border: 2px solid #f1f1f1;
+    color: black;
+    background-color: white;
+  }
+
+  .showpmes {
+    margin-right: 81%;
+  }
+
+  .date {
+    margin-right: 85%;
+    border: 2px solid #f1f1f1;
+    color: black;
+    background-color: white;
+  }
+
+  .genders {
+    margin-right: 75%;
+  }
+
+  .terms {
+    margin-right: 80%;
   }
 
