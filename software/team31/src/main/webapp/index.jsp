@@ -475,7 +475,7 @@
     </div>
 </form>
 
-<form id="AdminLoginForm" method="get" action="/AdminGuest" style="display: none">
+<form id="AdminLoginForm" method="get" action="AdminGuest" style="display: none">
     <div class="container">
         <center>  <h1> Login Form</h1> </center>
 

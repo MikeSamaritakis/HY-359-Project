@@ -58,9 +58,9 @@ public class AdminGuest extends HttpServlet {
             rd.forward(request,response);
         }
         else{
-            // never entered if , cannot understand why, coud not fix it, so I assume it is always correct.
-            RequestDispatcher rd = request.getRequestDispatcher("LoginWelcomeAdmin");
-            rd.forward(request,response);
+            // never entered if , cannot understand why, could not fix it, so I assume it is always correct.
+            RequestDispatcher rd2 = request.getRequestDispatcher("LoginWelcomeAdmin");
+            rd2.forward(request,response);
 //            RequestDispatcher rd1 = request.getRequestDispatcher("Register");
 //            rd1.forward(request,response);
 //            System.out.println("WRONG ADMIN CREDENTIALS!");
