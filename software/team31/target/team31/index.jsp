@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register" style="display: none">
+<form id="myForm" onsubmit ="return Mismatch()" method="post" action="/Register" style="display: none">
     <div class="container">
         <center>  <h1> Registration Form</h1> </center>
 
@@ -462,11 +462,11 @@
 
 
         <div class="pad">
-            <label>
+            <label style="color: blue">
                 *Terms and Conditions :
             </label><br>
             <input type="checkbox" id="terms" name="Terms" value="terms" required>
-            <label for="Terms" style="accent-color: blue"> By clicking I agree with the terms and conditions</label><br>
+            <label for="Terms"> By clicking I agree with the terms and conditions</label><br>
         </div>
 
         <div class="marg">
@@ -475,7 +475,7 @@
     </div>
 </form>
 
-<form id="AdminLoginForm" method="get" action="AdminGuest" style="display: none">
+<form id="AdminLoginForm" method="get" action="/AdminGuest" style="display: none">
     <div class="container">
         <center>  <h1> Login Form</h1> </center>
 
@@ -496,7 +496,7 @@
     </div>
 </form>
 
-<form id="GuestLoginForm" method="post" action="AdminGuest" style="display: none">
+<form id="GuestLoginForm" method="post" action="/AdminGuest" style="display: none">
     <div class="container">
         <center>  <h1> Login Form</h1> </center>
 
@@ -511,7 +511,7 @@
     </div>
 </form>
 
-<form id="StudentLoginForm" method="get" action="StudentLibrarian" style="display: none">
+<form id="StudentLoginForm" method="get" action="/StudentLibrarian" style="display: none">
     <div class="container">
         <center>  <h1> Login Form</h1> </center>
 
@@ -532,7 +532,7 @@
     </div>
 </form>
 
-<form id="LibrarianLoginForm" method="post" action="StudentLibrarian" style="display: none">
+<form id="LibrarianLoginForm" method="post" action="/StudentLibrarian" style="display: none">
     <div class="container">
         <center>  <h1> Login Form</h1> </center>
 

@@ -13,41 +13,36 @@
   <center>  <h1> Login/Register</h1> </center>
   <hr>
   <div class="buttonslogreg">
-    <button type="submit" name="Login" onclick='showLogin()'>Login</button>
-    <button type="submit" name="Register" onclick='showRegister()'>Register</button>
+    <button class="buttonlogreg" type="submit" name="Login" onclick='showLogin()' style="margin:5px;">Login</button>
+    <button class="buttonlogreg" type="submit" name="Register" onclick='showRegister()' style="margin:5px;">Register</button>
   </div>
-</div>
 
-<div class="log">
-  <center>  <h1 id="logintext" style="display: none" > Login </h1> </center>
-</div>
-<hr>
-<div class="log">
+  <center>  <h1 id="logintext" style="display: none" > Login as</h1> </center>
+
   <div class="buttonslog">
-    <button type="button" id="LoginAdmin" name="LoginAdmin" onclick='showAdminLogin()' style="display: none">Login as Admin</button>
-    <button type="button" id="LoginStudent" name="LoginStudent" onclick='showStudentLogin()' style="display: none">Login as Student</button>
-    <button type="button" id="LoginLibrarian" name="LoginLibrarian" onclick='showLibrarianLogin()' style="display: none">Login as Librarian</button>
-    <button type="button" id="LoginGuest" name="LoginGuest" onclick='showGuestLogin()' style="display: none">Login as Guest</button>
+    <button class="buttonlog" type="button" id="LoginAdmin" name="LoginAdmin" onclick='showAdminLogin()' style="display: none">Admin</button>
+    <button class="buttonlog" type="button" id="LoginStudent" name="LoginStudent" onclick='showStudentLogin()' style="display: none">Student</button>
+    <button class="buttonlog" type="button" id="LoginLibrarian" name="LoginLibrarian" onclick='showLibrarianLogin()' style="display: none">Librarian</button>
+    <button class="buttonlog" type="button" id="LoginGuest" name="LoginGuest" onclick='showGuestLogin()' style="display: none">Guest</button>
   </div>
-</div>
+
 
 <form id="myForm" onsubmit ="return Mismatch()" method="post" action="/Register" style="display: none">
   <div class="container">
     <center>  <h1> Registration Form</h1> </center>
-
     <hr>
     <div class="pad">
-      <label><b> *Username :</b></label>
+      <label style="margin-right: 90%;"><b> *Username :</b></label>
       <input type="text" name="Username" placeholder= "Username" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" required minlength="8"/>
     </div>
 
     <div class="pad">
-      <label> *Email :</label><br>
-      <input  type="email" placeholder="Email" name="Email" required><br></br>
+      <label style="margin-right: 93.5%;"><b> *Email :</b></label><br>
+      <input  class="email" type="email" placeholder="Email" name="Email" required><br></br>
     </div>
 
     <div class="pad">
-      <td> *Create Password </td>
+      <label style="margin-right: 85%;"><b> *Create Password :</b></label>
       <input type = "password" placeholder="Password" name="Password" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" required minlength="8" maxlength="12" value = "">
       <input type="checkbox" onclick="ShowPass1()">Show Password <br>
       <button onclick="PassStrength()"> see password strength </button>
@@ -57,7 +52,7 @@
     </div>
 
     <div class="pad">
-      <td> *Confirm Password </td>
+      <label style="margin-right: 83%;"><b> *Confirm Password :</b></label>
       <input type = "password" placeholder="Retype Password" name="psw-repeat" id="myInput2" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" required minlength="8" maxlength="12" value = "">
       <span id = "message1" style="color:red"> </span>
       <span id = "message4" style="color:red"> </span>
@@ -136,7 +131,7 @@
         <label>
           Pass Number :
         </label><br>
-        <input type="number" name="Student_id" maxlength="12" minlength="12"><br><br>
+        <input type="number" name="Student_id" minlength="12" maxlength="12"><br><br>
       </div>
 
       <div class="pad">
@@ -475,20 +470,24 @@
   </div>
 </form>
 
+<div class="logreg">
 <form id="AdminLoginForm" method="get" action="/AdminGuest" style="display: none">
   <div class="container">
     <center>  <h1> Login Form</h1> </center>
 
     <hr>
     <div class="pad">
-      <label><b> Username :</b></label>
-      <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
+      <label style="margin-right: 90%;"><b> Username :</b></label>
+      <input type="text" name="loginadminusername" placeholder= "Username" size="15" required/>
     </div>
 
     <div class="pad">
-      <label><b> Password : </b></label>
-      <input type = "password" placeholder="Password" name="loginpassword" id="myInput3" required minlength="8" maxlength="12" value = ""/>
-      <input type="checkbox" onclick="ShowPass3()">Show Password <br>
+      <label style="margin-right: 90%;"><b> Password : </b></label>
+      <input type = "password" placeholder="Password" name="loginadminpassword" id="myInput3" required minlength="8" maxlength="12" value = ""/>
+      <div style="margin-right: 85%;">
+      <input id="text" type="checkbox" onclick="ShowPass3()">
+      <label for="text"> Show Password</label>
+      </div>
     </div>
     <div class="marg">
       <button type="submit" class="regbtn" value="Call Servlet">Login as Admin</button>
@@ -502,7 +501,7 @@
 
     <hr>
     <div class="pad">
-      <label><b> Name :</b></label>
+      <label style="margin-right: 92%;"><b> Name :</b></label>
       <input type="text" name="loginusername" placeholder= "Insert temporary Name" size="15" required minlength="8"/>
     </div>
     <div class="marg">
@@ -517,14 +516,17 @@
 
     <hr>
     <div class="pad">
-      <label><b> Username :</b></label>
+      <label style="margin-right: 90%;"><b> Username :</b></label>
       <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
     </div>
 
     <div class="pad">
-      <label><b> Password : </b></label>
+      <label style="margin-right: 90%;"><b> Password : </b></label>
       <input type = "password" placeholder="Password" name="loginpassword" id="myInput4" required minlength="8" maxlength="12" value = ""/>
-      <input type="checkbox" onclick="ShowPass4()">Show Password <br>
+      <div style="margin-right: 85%;">
+      <input type="checkbox" onclick="ShowPass4()">
+        <label for="text"> Show Password</label>
+      </div>
     </div>
     <div class="marg">
       <button type="submit" class="regbtn" value="Call Servlet">Login as Student</button>
@@ -538,14 +540,17 @@
 
     <hr>
     <div class="pad">
-      <label><b> Username :</b></label>
+      <label style="margin-right: 90%;"><b> Username :</b></label>
       <input type="text" name="loginusername" placeholder= "Username" size="15" required minlength="8"/>
     </div>
 
     <div class="pad">
-      <label><b> Password : </b></label>
+      <label style="margin-right: 90%;"><b> Password : </b></label>
       <input type = "password" placeholder="Password" name="loginpassword" id="myInput5" required minlength="8" maxlength="12" value = ""/>
-      <input type="checkbox" onclick="ShowPass5()">Show Password <br>
+      <div style="margin-right: 85%;">
+      <input type="checkbox" onclick="ShowPass5()">
+        <label for="text"> Show Password</label>
+      </div>
     </div>
     <div class="marg">
       <button type="submit" class="regbtn" value="Call Servlet">Login as Librarian</button>
@@ -553,5 +558,6 @@
   </div>
 </form>
 
+</div>
 </body>
 </html>

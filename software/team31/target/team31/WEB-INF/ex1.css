@@ -58,20 +58,16 @@
   }
 
   .regbtn {
-    background-color: #4CAF50; /* Green */
+    padding: 16px 20px;
+    margin-left: 75%;
     border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
-    border-radius: 4px;
+    width: 50%;
+    opacity: 0.9;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
   }
-
-  .buttonR {border-radius: 4px;}
    
   .registerbtn:hover {  
     opacity: 1;  
