@@ -28,12 +28,16 @@ import mainClasses.Librarian;
 import mainClasses.Review;
 import mainClasses.Student;
 import mainClasses.User;
+import database.DB_Connection;
 
 import java.util.logging.*;
 import com.google.gson.JsonObject;
 import java.sql.*;
 
-@WebServlet(name = "Servlets.LoginWelcomeAdmin", value = "/Servlets.LoginWelcomeAdmin")
+import static database.DB_Connection.getConnection;
+import static database.DB_Connection.printResults;
+
+@WebServlet("/LoginWelcomeAdmin")
 public class LoginWelcomeAdmin extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
@@ -42,6 +46,47 @@ public class LoginWelcomeAdmin extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        PrintWriter writer = response.getWriter();
+        writer.println("Welcome Admin");
+
+        try {
+            DB_Connection.getConnection();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        String query = "select username from students";
+        Statement stmt = null;
+
+        try {
+            stmt = DB_Connection.getConnection().createStatement();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        ResultSet rs;
+
+        try {
+            rs = stmt.executeQuery("select username from students");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            int n = 1;
+            rs.first();
+            while (n<5){
+                rs.next();
+                System.out.println(rs.getString(n-1));
+                n++;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

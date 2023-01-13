@@ -15,7 +15,7 @@ import database.tables.EditLibrarianTable;
 public class Register extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
-    public Register(){
+    public Register() {
         super();
     }
 
@@ -140,5 +140,14 @@ public class Register extends HttpServlet {
 
         writer.close();
 
-        }
+    }
+
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        PrintWriter writer = response.getWriter();
+
+        writer.println("STOP");
+    }
+
 }

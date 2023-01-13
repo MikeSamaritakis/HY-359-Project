@@ -45,25 +45,30 @@ public class StudentLibrarian extends HttpServlet {
 //student
         PrintWriter writer = response.getWriter();
 
-        String username = request.getParameter("USERNAME");
-        String password = request.getParameter("PASSWORD");
-
-        writer.println(username);
-        writer.println(password);
-
-//        Student p = new Student();
-//        try {
-//            p = EditStudentsTable.databaseToStudent(username,password);
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
+        String username = request.getParameter("loginusername");
+        String password = request.getParameter("loginpassword");
 //
-//        String un = p.getUsername();
+//        writer.println(username);
+//        writer.println(password);
+//
+        Student p = new Student();
+
+        try {
+            p = EditStudentsTable.databaseToStudent(username, password);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+
+        }
+
+//        String un = p.getPersonalpage();
 //        writer.println(un);
 
+        response.sendRedirect("http://localhost:8080/team31_war_exploded/LoginWelcomeStudent/");
+
         writer.close();
+        writer.flush();
     }
 
     @Override
@@ -71,24 +76,29 @@ public class StudentLibrarian extends HttpServlet {
 //librarian
         PrintWriter writer = response.getWriter();
 
-        String username = request.getParameter("USERNAME");
-        String password = request.getParameter("PASSWORD");
-
-        writer.println(username);
-        writer.println(password);
-
-//        Student p = new Student();
-//        try {
-//            p = EditStudentsTable.databaseToStudent(username,password);
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
+        String username = request.getParameter("loginusername");
+        String password = request.getParameter("loginpassword");
 //
-//        String un = p.getUsername();
+//        writer.println(username);
+//        writer.println(password);
+//
+        Student p = new Student();
+
+        try {
+            p = EditStudentsTable.databaseToStudent(username, password);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+
+        }
+
+//        String un = p.getPersonalpage();
 //        writer.println(un);
 
+        response.sendRedirect("http://localhost:8080/team31_war_exploded/LoginWelcomeLibrarian/");
+
         writer.close();
+        writer.flush();
     }
 }
