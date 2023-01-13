@@ -1,4 +1,4 @@
-    body{  
+  body {
     font-family: Calibri, Helvetica, sans-serif;  
     /*background-color: rgb(0, 0, 0);  */
   }  
@@ -48,7 +48,7 @@
     padding: 50px;    
   }
 
-   div {  
+  div {
     padding: 10px 0;  
   }
     
@@ -57,25 +57,28 @@
     margin-bottom: 25px;  
   }
 
-  .regbtn {    
-    padding: 16px 20px;  
-    margin-left: 75%;  
-    border: none;  
-    cursor: pointer;  
-    width: 50%;  
-    opacity: 0.9; 
-    background-color: #4CAF50;  
-    color: white; 
-  } 
+  .regbtn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
    
   .registerbtn:hover {  
     opacity: 1;  
   }
 
-  .marg{
+  .marg {
     margin-right: 50%;
   }
 
-  .pad{
+  .pad {
     padding: 1%;
   }

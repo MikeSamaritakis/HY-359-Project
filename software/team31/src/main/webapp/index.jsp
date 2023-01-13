@@ -466,11 +466,11 @@
                 *Terms and Conditions :
             </label><br>
             <input type="checkbox" id="terms" name="Terms" value="terms" required>
-            <label for="Terms"> By clicking i agree with the terms and conditions</label><br>
+            <label for="Terms" style="accent-color: blue"> By clicking I agree with the terms and conditions</label><br>
         </div>
 
         <div class="marg">
-            <button type="submit" onclick="return PassForm()" class="regbtn" value="Call Servlet">Servlets.Register </button>
+            <button type="submit" onclick="return PassForm()" class="regbtn" value="Call Servlet">Register </button>
         </div>
     </div>
 </form>
@@ -552,8 +552,6 @@
         </div>
     </div>
 </form>
-
-
 
 </body>
 </html>
