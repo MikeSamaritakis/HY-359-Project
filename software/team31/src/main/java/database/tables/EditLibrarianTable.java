@@ -83,6 +83,7 @@ public class EditLibrarianTable {
         } catch (Exception e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
+            System.out.println("WRONG CREDENTIALS!");
         }
         return null;
     }

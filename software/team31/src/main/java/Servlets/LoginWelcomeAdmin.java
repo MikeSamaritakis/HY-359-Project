@@ -33,7 +33,7 @@ import java.util.logging.*;
 import com.google.gson.JsonObject;
 import java.sql.*;
 
-@WebServlet(name = "Servlets.LoginWelcomeAdmin", value = "/Servlets.LoginWelcomeAdmin")
+@WebServlet("/LoginWelcomeAdmin")
 public class LoginWelcomeAdmin extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
@@ -42,7 +42,8 @@ public class LoginWelcomeAdmin extends HttpServlet {
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        PrintWriter writer = response.getWriter();
+        writer.println("adminwelcome");
     }
 
     @Override

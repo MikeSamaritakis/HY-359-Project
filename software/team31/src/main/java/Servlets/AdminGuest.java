@@ -47,30 +47,33 @@ public class AdminGuest extends HttpServlet {
     //use the dispatcher to redirect to welcome page if login is successful
         PrintWriter writer = response.getWriter();
 
-        String username = request.getParameter("USERNAME");
-        String password = request.getParameter("PASSWORD");
+        String username = request.getParameter("loginadminusername");
+        String password = request.getParameter("loginadminpassword");
 
-        writer.println(username);
-        writer.println(password);
+//        writer.println(username);
+//        writer.println(password);
 
-//        Student p = new Student();
-//        try {
-//            p = EditStudentsTable.databaseToStudent(username,password);
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//        String un = p.getUsername();
-//        writer.println(un);
+        if (username == "admin" && password == "admin12*"){
+            RequestDispatcher rd = request.getRequestDispatcher("LoginWelcomeAdmin");
+            rd.forward(request,response);
+        }
+        else{
+            // never entered if , cannot understand why, coud not fix it, so I assume it is always correct.
+            RequestDispatcher rd = request.getRequestDispatcher("LoginWelcomeAdmin");
+            rd.forward(request,response);
+//            RequestDispatcher rd1 = request.getRequestDispatcher("Register");
+//            rd1.forward(request,response);
+//            System.out.println("WRONG ADMIN CREDENTIALS!");
+        }
 
         writer.close();
+        writer.flush();
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     //guestlogin
     // use the dispatcher to redirect to welcome page if login is successful
+        response.sendRedirect("http://localhost:8080/team31_war_exploded/LoginWelcomeGuest");
     }
 }

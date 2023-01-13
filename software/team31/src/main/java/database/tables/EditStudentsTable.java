@@ -9,6 +9,9 @@ import mainClasses.Student;
 import com.google.gson.Gson;
 import mainClasses.User;
 import database.DB_Connection;
+
+import java.io.PrintWriter;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,6 +19,14 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import mainClasses.Borrowing;
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
@@ -70,7 +81,7 @@ public class EditStudentsTable {
         }
     }
     
-    public Student databaseToStudent(String username, String password) throws SQLException, ClassNotFoundException{
+    public static Student databaseToStudent(String username, String password) throws SQLException, ClassNotFoundException{
          Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 
@@ -85,10 +96,11 @@ public class EditStudentsTable {
         } catch (Exception e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());
+            System.out.println("WRONG CREDENTIALS!");
         }
         return null;
     }
-    
+
     public String databaseStudentToJSON(String username, String password) throws SQLException, ClassNotFoundException{
          Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
