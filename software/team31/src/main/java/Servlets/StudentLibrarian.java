@@ -96,7 +96,7 @@ public class StudentLibrarian extends HttpServlet {
 //        String un = p.getPersonalpage();
 //        writer.println(un);
 
-        response.sendRedirect("http://localhost:8080/team31_war_exploded/LoginWelcomeLibrarian/");
+
 
         writer.close();
         writer.flush();
