@@ -56,6 +56,8 @@ public class StudentLibrarian extends HttpServlet {
         try {
             p = EditStudentsTable.databaseToStudent(username, password);
         } catch (SQLException e) {
+            PrintWriter out = response.getWriter();
+            out.println("<html><body>Wrong Credentials, try again by going to <a href=\"http://localhost:8080/team31_war_exploded/\">the previous page!</a></body></html>");
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -64,8 +66,6 @@ public class StudentLibrarian extends HttpServlet {
 
 //        String un = p.getPersonalpage();
 //        writer.println(un);
-
-        response.sendRedirect("http://localhost:8080/team31_war_exploded/LoginWelcomeStudent/");
 
         writer.close();
         writer.flush();
@@ -87,15 +87,18 @@ public class StudentLibrarian extends HttpServlet {
         try {
             p = EditStudentsTable.databaseToStudent(username, password);
         } catch (SQLException e) {
+            PrintWriter out = response.getWriter();
+            out.println("<html><body>Wrong Credentials, try again by going to <a href=\"http://localhost:8080/team31_war_exploded/\">the previous page!</a></body></html>");
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
-
         }
+        // If the log-in fails then an exception is thrown meaning that the user will not see the
+        // page created below, thus he/she will not have access to any sensitive information.
 
 //        String un = p.getPersonalpage();
 //        writer.println(un);
-
+//        Testing to see if the login worked.
 
 
         writer.close();
