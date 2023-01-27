@@ -111,8 +111,8 @@ public class AdminGuest extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    //guestlogin
+    protected void doPost(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
+        //guestlogin
         /* When you create a servlet by making an entry to the web.xml file, there is a URL pattern
         associated with it. So, whenever you hit a URL containing that pattern
         ( whether by directly entering it in browser or by submitting a form to that URL ),
@@ -130,21 +130,51 @@ public class AdminGuest extends HttpServlet {
     Though, this is considered a bad practice since this mixes the View part
     ( the JSP or HTML ) with your Controller logic ( which is implemented in Servlet ).
     Added external CSS styling.*/
+        PrintWriter out = res.getWriter();
+        try {
+            DB_Connection.getConnection();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        String query = "select isbn from books";
+        Statement stmt = null;
+        try {
+            stmt = DB_Connection.getConnection().createStatement();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        ResultSet rs;
 
-        response.setContentType("text/html");
-        PrintWriter writehtml = response.getWriter();
+        try {
+            rs = stmt.executeQuery(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try
+        {
 
-        String username = request.getParameter("guestusername");
 
-//        writehtml.println("<html>");
-//        writehtml.println("<head>");
-////        writehtml.println("<link rel='stylesheet' href='Guest.css'>");
-//        writehtml.println("</head>");
-//        writehtml.println("<body>");
-//        writehtml.println("<div class='container' style='text-align: center; margin: auto; width: 50%; padding: 10px;>");
-//        writehtml.println("<h1 class='welcome-message' style='color: blue; font-size: 3em;'>Welcome, " + username + "!</h1>");
-//        writehtml.println("</div>");
-//        writehtml.println("</body>");
-//        writehtml.println("</html>");
-    }
-}
+            rs = stmt.executeQuery("select * from books");
+            out.println("<table border=1 width=50% height=50%>");
+
+            while (rs.next())
+            {
+
+                String nm = rs.getString("title");
+
+                out.println("<tr><td>" + nm + "</td></tr>");
+            }
+            out.println("</table>");
+            out.println("</html></body>");
+
+        }
+        catch (Exception e)
+        {
+            out.println("error");
+        }
+
+    }}
