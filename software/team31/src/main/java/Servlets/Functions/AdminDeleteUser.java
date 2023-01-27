@@ -1,5 +1,9 @@
 package Servlets.Functions;
 
+import database.tables.EditLibrarianTable;
+import database.tables.EditStudentsTable;
+import mainClasses.Librarian;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -15,7 +19,29 @@ public class AdminDeleteUser extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("UsernAMEAPOHTML");
+        String type = request.getParameter("TYPOSAPOHtmL");
 
+        if (type == "1"){
+            EditLibrarianTable lib = new EditLibrarianTable();
+            try {
+                lib.deleteLibrarian(username);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        else if (type == "2"){
+            EditStudentsTable stu = new EditStudentsTable();
+            try {
+                stu.deleteStudent(username);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        else if (type == "0"){
+            System.out.println("No user type selected.");
+            System.err.println("Error occured, not type selected by admin.");
+        }
     }
 
     @Override

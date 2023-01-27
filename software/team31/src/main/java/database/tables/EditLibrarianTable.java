@@ -184,4 +184,23 @@ public class EditLibrarianTable {
         }
     }
 
+    public void deleteLibrarian(String username) throws ClassNotFoundException{
+        try {
+            Connection con = DB_Connection.getConnection();
+
+            Statement stmt = con.createStatement();
+
+            String insertQuery = "DELETE FROM librarians WHERE username = '" + username + "'";
+            //stmt.execute(table);
+            System.out.println(insertQuery);
+            stmt.executeUpdate(insertQuery);
+            System.out.println("# The librarian was successfully deleted from the database.");
+
+            stmt.close();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(EditLibrarianTable.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }
