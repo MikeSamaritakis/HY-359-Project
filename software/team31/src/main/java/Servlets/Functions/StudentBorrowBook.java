@@ -21,7 +21,7 @@ public class StudentBorrowBook extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//  Edit info for Students
+//  View books
 
         PrintWriter out = response.getWriter();
         response.setContentType("text/html");
@@ -77,6 +77,6 @@ public class StudentBorrowBook extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//  Edit info for Librarians
+//  Borrow book
     }
 }
