@@ -1,0 +1,101 @@
+#grad1 {
+    height: 1000px;
+    background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(orange, #EC6F66, white);
+}
+
+.vertical {
+    border-left: 4px solid black;
+    height: 800px;
+    position:absolute;
+    left: 15%;
+}
+
+.solid {
+    border-top: 3px solid white;
+    width: 70%;
+}
+
+.wt{
+    font-family: "Courier New";
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-family: "Courier New";
+    color: black;
+    font-size: x-large;
+    padding-top: 37%;
+}
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    margin-left: 87%;
+    margin-bottom: 100%;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 20px;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: transparent transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent transparent transparent;
+    top: 7px;
+}
+
+.select-items div,.select-selected {
+    color: 	#E66355;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+}
+
+.select-items {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    opacity: 0.6;
+    border-radius: 20px;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+
+
+
