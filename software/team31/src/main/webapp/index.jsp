@@ -530,7 +530,7 @@
                     </div>
                 </form>
 
-                <form id="LibrarianLoginForm" method="post" action="/StudentLibrarian" style="display: none">
+                <form id="LibrarianLoginForm" method="post" action="StudentLibrarian" style="display: none">
                     <div class="container">
                         <center>  <h1> Login Form</h1> </center>
 
