@@ -33,7 +33,7 @@ import java.util.logging.*;
 import com.google.gson.JsonObject;
 import java.sql.*;
 
-@WebServlet("/StudentLibrarian")
+@WebServlet()
 public class StudentLibrarian extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
@@ -43,11 +43,14 @@ public class StudentLibrarian extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //student
-        PrintWriter writer = response.getWriter();
 
         String username = request.getParameter("loginusername");
         String password = request.getParameter("loginpassword");
 
+//
+//        writer.println(username);
+//        writer.println(password);
+//
         Student p = new Student();
 
         try {
@@ -63,20 +66,22 @@ public class StudentLibrarian extends HttpServlet {
         }
         // If the log-in fails then an exception is thrown meaning that the user will not see the
         // page created as a welcome user, thus he/she will not have access to any sensitive information.
+        RequestDispatcher rd= request.getRequestDispatcher("/Student.html");
+        rd.forward(request,response);
 
-//        RequestDispatcher dispatcher =
-//                getServletContext().getRequestDispatcher("http://localhost:8080/team31_war_exploded/StudentBorrowBook");
-//        dispatcher.include(request, response);
-        response.sendRedirect("http://localhost:8080/team31_war_exploded/StudentBorrowBook");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //librarian
 
+
         String username = request.getParameter("loginusername");
         String password = request.getParameter("loginpassword");
-
+//
+//        writer.println(username);
+//        writer.println(password);
+//
         Librarian p = new Librarian();
 
         try {
@@ -93,11 +98,9 @@ public class StudentLibrarian extends HttpServlet {
         }
         // If the log-in fails then an exception is thrown meaning that the user will not see the
         // page created as a welcome user, thus he/she will not have access to any sensitive information.
+        response.sendRedirect("Librarian.html");
 
-        response.sendRedirect("http://localhost:8080/team31_war_exploded/StudentBorrowBook");
 
-//        RequestDispatcher dispatcher =
-//                getServletContext().getRequestDispatcher("http://localhost:8080/team31_war_exploded/StudentBorrowBook");
-//        dispatcher.include(request, response);
+
     }
 }
