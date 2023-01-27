@@ -66,6 +66,9 @@ public class StudentLibrarian extends HttpServlet {
         }
         // If the log-in fails then an exception is thrown meaning that the user will not see the
         // page created as a welcome user, thus he/she will not have access to any sensitive information.
+         String updateemail = p.getEmail();
+         String updatefirstname = p.getFirstname();
+         String updatelastname =  p.getLastname();
         RequestDispatcher rd= request.getRequestDispatcher("/Student.html");
         rd.forward(request,response);
 
