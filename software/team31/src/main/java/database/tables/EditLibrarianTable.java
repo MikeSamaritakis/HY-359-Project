@@ -68,7 +68,7 @@ public class EditLibrarianTable {
         }
     }
 
-    public Librarian databaseToLibrarian(String username, String password) throws SQLException, ClassNotFoundException {
+    public static Librarian databaseToLibrarian(String username, String password) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
 

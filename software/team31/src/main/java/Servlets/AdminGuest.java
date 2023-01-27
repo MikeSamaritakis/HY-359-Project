@@ -67,8 +67,6 @@ public class AdminGuest extends HttpServlet {
 //            out.println("<html><body>Wrong Admin Credentials, try again by going to <a href=\"http://localhost:8080/team31_war_exploded/\">the previous page!</a></body></html>");
         }
 
-
-
         try {
             DB_Connection.getConnection();
         } catch (SQLException e) {
@@ -91,7 +89,7 @@ public class AdminGuest extends HttpServlet {
         ResultSet rs;
 
         try {
-            rs = stmt.executeQuery("select username from students");
+            rs = stmt.executeQuery(query);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -138,15 +136,15 @@ public class AdminGuest extends HttpServlet {
 
         String username = request.getParameter("guestusername");
 
-        writehtml.println("<html>");
-        writehtml.println("<head>");
-//        writehtml.println("<link rel='stylesheet' href='Guest.css'>");
-        writehtml.println("</head>");
-        writehtml.println("<body>");
-        writehtml.println("<div class='container' style='text-align: center; margin: auto; width: 50%; padding: 10px;>");
-        writehtml.println("<h1 class='welcome-message' style='color: blue; font-size: 3em;'>Welcome, " + username + "!</h1>");
-        writehtml.println("</div>");
-        writehtml.println("</body>");
-        writehtml.println("</html>");
+//        writehtml.println("<html>");
+//        writehtml.println("<head>");
+////        writehtml.println("<link rel='stylesheet' href='Guest.css'>");
+//        writehtml.println("</head>");
+//        writehtml.println("<body>");
+//        writehtml.println("<div class='container' style='text-align: center; margin: auto; width: 50%; padding: 10px;>");
+//        writehtml.println("<h1 class='welcome-message' style='color: blue; font-size: 3em;'>Welcome, " + username + "!</h1>");
+//        writehtml.println("</div>");
+//        writehtml.println("</body>");
+//        writehtml.println("</html>");
     }
 }
