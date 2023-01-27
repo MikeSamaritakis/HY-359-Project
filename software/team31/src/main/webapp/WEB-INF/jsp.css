@@ -1,6 +1,5 @@
   body {
     font-family: Calibri, Helvetica, sans-serif;
-    overflow: scroll;
   }
     
   input[type=text], input[type=password], textarea {
@@ -28,6 +27,8 @@
   .container {  
     background-color: rgb(255, 255, 255);
     padding: 50px;
+    overflow: auto;
+    overflow: hidden;
   }
 
   div {
