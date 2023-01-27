@@ -7,37 +7,37 @@
   <script src="ex1.js"></script>
 
 </head>
-<body>
+<body id="grad1">
 
 <div class="logreg">
   <center><h1> Login/Register</h1> </center>
   <hr>
   <div class="buttonslogreg">
-    <button class="buttonlogreg" type="submit" name="Login" onclick='showLogin()'>Login</button>
-    <button class="buttonlogreg" type="submit" name="Register" onclick='showRegister()'>Register</button>
+    <button class="buttonlogreg" name="Login" onclick='showLogin()'>Login</button>
+    <button class="buttonlogreg" name="Register" onclick='showRegister()'>Register</button>
 
   <center><h1 id="logintext" style="display: none"> Login as</h1> </center>
 
-    <center><button class="buttonlogreg" type="button" id="LoginAdmin" name="LoginAdmin" onclick='showAdminLogin()' style="display: none">Admin</button>
-    <button class="buttonlogreg" type="button" id="LoginStudent" name="LoginStudent" onclick='showStudentLogin()' style="display: none">Student</button>
-    <button class="buttonlogreg" type="button" id="LoginLibrarian" name="LoginLibrarian" onclick='showLibrarianLogin()' style="display: none">Librarian</button>
-    <button class="buttonlogreg" type="button" id="LoginGuest" name="LoginGuest" onclick='showGuestLogin()' style="display: none">Guest</button> </center>
+    <center><button class="buttonlog"  id="LoginAdmin" onclick='showAdminLogin()' style="display: none">Admin</button>
+      <button class="buttonlog"  id="LoginStudent" onclick='showStudentLogin()' style="display: none">Student</button>
+      <button class="buttonlog" id="LoginLibrarian" onclick='showLibrarianLogin()' style="display: none">Librarian</button>
+      <button class="buttonlog" id="LoginGuest" onclick='showGuestLogin()' style="display: none">Guest</button> </center>
   </div>
 
 <form id="myForm" onsubmit ="return Mismatch()" method="post" action="/Register" style="display: none">
-  <div class="container">
+  <div class="container" style="background-color: transparent">
     <center>  <h1> Registration Form</h1> </center>
     <hr>
     <div class="pad">
       <label style="margin-right: 89.5%;"><b> *Username :</b></label>
       <input type="text" name="Username" placeholder= "Username" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" required minlength="8"/>
     </div>
-
+    <br>
     <div class="pad">
       <label style="margin-right: 93.5%;"><b> *Email :</b></label><br>
       <input  class="email" type="email" placeholder="Email" name="Email" required><br></br>
     </div>
-
+    <br>
     <div class="pad">
       <label style="margin-right: 85%;"><b> *Create Password :</b></label>
       <input type = "password" placeholder="Password" name="Password" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" required minlength="8" maxlength="12" value = "">
@@ -45,11 +45,11 @@
         <input id="text1" type="checkbox" onclick="ShowPass1()">
         <label for="text1"> Show Password</label>
       </div>
-      <div class="showpmes">
-      <button class="border" onclick="PassStrength()"> see password's strength </button>
-      <span id = "sw" style="color:red"> </span>
-      <span id = "ss" style="color:rgb(85, 212, 0)"> </span>
-      <span id = "sm" style="color:rgb(255, 141, 28)"> </span><br></br><br>
+      <div>
+        <button class="sps" onclick="PassStrength()"> see password's strength </button>
+      <span class="showpmes" id = "sw" style="color:red" > </span>
+      <span class="showpmes" id = "ss" style="color:rgb(85, 212, 0)"> </span>
+      <span class="showpmes" id = "sm" style="color:rgb(255, 141, 28)"> </span><br></br><br>
       </div>
     </div>
 
@@ -63,7 +63,7 @@
         <label for="text2"> Show Password</label>
       </div>
     </div>
-
+    <br>
     <div class="pad">
       <label style="margin-right: 90%;"><b> *Firstname :</b></label>
       <input type="text" name="Firstname" placeholder= "Firstname" size="15" required minlength="3" maxlength="30"/>
@@ -73,49 +73,49 @@
       <label style="margin-right: 90%;"><b> *Lastname :</b></label>
       <input type="text" name="Lastname" placeholder="Lastname" size="15"required minlength="3" maxlength="30"/>
     </div>
-
+    <br>
     <div class="pad">
       <label style="margin-right: 94%;" for="start" name="Birthdate"><b>*Date :</b></label>
-      <div class="showpmes">
+      <div>
       <input class="date" type="date" id="start" name="Birthdate"
              value="1980-01-01"
              min="1920-01-01" max="2006-12-31">
         </div>
     </div>
-
+    <br>
     <div class="pad">
       <div>
         <label required style="margin-right: 92%;"><b> *Gender :</b></label>
-        <div class="genders">
-        <input type="radio" value="Male" name="Gender" checked > Male
+        <div class="genders" style="margin-top: 1%">
+          <div class="move2">
+        <input type="radio" value="Male" name="Gender"> Male
         <input type="radio" value="Female" name="Gender"> Female
         <input type="radio" value="Other" name="Gender"> Other
         </div>
+        </div>
       </div>
     </div>
-
+    <br>
     <div class="pad">
       <div>
         <label required style="margin-right: 90%;"><b> *User Type :</b></label>
-        <div class="showpmes">
-        <select class="border" style="margin-right: 90%;" onchange='showElement(this.value)'>
+        <select class="ut" style="margin-right: 90%;" onchange='showElement(this.value)'>
           <option value="select">--Select--</option>
           <option value="student">Student</option>
           <option value="librarian">Library Manager</option>
         </select>
       </div>
-      </div>
     </div>
-
+    <br>
     <div id="librarian" style="display: none">
       <div class="pad">
-        <label> Library Name :</label>
-        <input type="text" name="Libraryname" placeholder= "Libraryname" size="15"/>
+        <label style="margin-right: 87.5%;"><b> Library Name :</b></label>
+        <input type="text" name="Libraryname" placeholder= "Libraryname" size="15" />
       </div>
-
+      <br>
       <div class="pad">
-        <label> Library Info :</label>
-        <input type="text" name="Libraryinfo" placeholder= "Libraryinfo" size="15"/>
+        <label style="margin-right: 89%;"><b> Library Info :</b></label>
+        <input type="text" name="Libraryinfo" placeholder= "Libraryinfo" size="15" />
       </div>
     </div>
 
@@ -123,8 +123,8 @@
       <div class="pad">
         <div>
           <label style="margin-right: 88%;"><b> Student Type :</b></label>
-          <div class="showpmes">
-          <select style="margin-right: 90%;" class="border" name="Student_type">
+          <div>
+          <select style="margin-right: 90%;" class="ut" name="Student_type">
             <option value="select">--Select--</option>
             <option value="Bachelor">Bachelor</option>
             <option value="Masters">Masters</option>
@@ -133,35 +133,34 @@
         </div>
         </div>
       </div>
-
+      <br>
       <div class="pad">
         <label style="margin-right: 88%;"><b> Pass Number :</b></label>
-        <input type="text" name="Student_id" minlength="12" maxlength="12" pattern="(?=.*[0-9]).{12,}"><br><br>
+        <input type="text" name="Student_id" minlength="12" maxlength="12" pattern="(?=.*[0-9]).{12,}">
       </div>
-
+      <br>
       <div class="pad">
         <label style="margin-right: 87%;"><b> Pass start date :</b></label>
-        <div class="showpmes">
-        <input style="margin-right: 87%;" class="border" type="date" id="start2" name="Student_id_from_date"
+        <div>
+        <input style="margin-right: 87%;" class="date" type="date" id="start2" name="Student_id_from_date"
                value="2016-01-01"
                min="2016-01-01"><br></br>
       </div>
       </div>
-
+      <br>
       <div class="pad">
         <label style="margin-right: 83%;"><b> Pass expiration date :</b></label>
-        <div class="showpmes">
-        <input style="margin-right: 87%;" class="border" type="date" id="expiration" name="Student_id_to_date"
+        <div>
+        <input style="margin-right: 87%;" class="date" type="date" id="expiration" name="Student_id_to_date"
                value="2023-01-01"
                min="2023-01-01"><br></br>
       </div>
       </div>
-
       <div class="pad">
         <div>
           <label style="margin-right: 90%;"><b> University :</b></label>
-          <div class="showpmes">
-          <select style="margin-right: 90%;" class="border" name="University">
+          <div>
+          <select style="margin-right: 90%;" class="ut" name="University">
             <option value="select">--Select--</option>
             <option value="UOC">UOC</option>
             <option value="HELMEPA">HELMEPA</option>
@@ -170,7 +169,7 @@
         </div>
         </div>
       </div>
-
+      <br>
       <div class="pad">
         <label style="margin-right: 88.5%;"><b> Department :</b></label>
         <input type="text" name="Department" placeholder= "Department" size="15" minlength="3" maxlength="50"/>
@@ -179,12 +178,12 @@
 
     <div class="pad">
       <label style="margin-right: 88%;"><b> Personal URL :</b></label>
-      <input class="border" style="margin-right: 88%;" type="url" id="personal url" name="Personalpage">
+      <input class="ut" style="margin-right: 88%;" type="url" id="personal url" name="Personalpage">
     </div>
-
+    <br>    <br>
     <div class="pad">
         <label style="margin-right: 91.7%;"><b> Country :</b></label>
-        <select class="border" style="margin-right: 100%;"name="Country">
+        <select class="ut" style="margin-right: 100%;"name="Country">
           <option value="Greece">Greece</option>
           <option value="Afghanistan">Afghanistan</option>
           <option value="Åland Islands">Åland Islands</option>
@@ -432,17 +431,17 @@
           <option value="Zimbabwe">Zimbabwe</option>
         </select>
     </div>
-
+    <br>    <br>
     <div class="pad">
       <label style="margin-right: 94.5%;"><b> City :</b></label>
       <input type="text" name="City" placeholder= "City" size="15" minlength="3" maxlength="50"/>
     </div>
-
+    <br>
     <div class="pad">
       <label style="margin-right: 92%;"><b> Address :</b></label>
       <input type="text" name="Address" placeholder= "Address" size="15" minlength="5" maxlength="50"/>
     </div>
-
+    <br>
     <div class="pad">
       <label style="margin-right: 93%;"><b> Phone :</b></label>
       <input class="border" style="margin-right: 100%;" type="text" name="Telephone" placeholder="Phone" size="10" minlength="10" maxlength="14" pattern="(?=.*[0-9]).{10,}"> <br></br>
@@ -466,7 +465,7 @@
 
 <div class="logreg">
 <form id="AdminLoginForm" method="get" action="/AdminGuest" style="display: none">
-  <div class="container">
+  <div class="container" style="background-color: transparent">
     <center>  <h1> Login Form</h1> </center>
 
     <hr>
@@ -490,7 +489,7 @@
 </form>
 
 <form id="GuestLoginForm" method="post" action="/AdminGuest" style="display: none">
-  <div class="container">
+  <div class="container" style="background-color: transparent">
     <center>  <h1> Login Form</h1> </center>
 
     <hr>
@@ -505,7 +504,7 @@
 </form>
 
 <form id="StudentLoginForm" method="get" action="/StudentLibrarian" style="display: none">
-  <div class="container">
+  <div class="container" style="background-color: transparent">
     <center>  <h1> Login Form</h1> </center>
 
     <hr>
@@ -529,7 +528,7 @@
 </form>
 
 <form id="LibrarianLoginForm" method="post" action="/StudentLibrarian" style="display: none">
-  <div class="container">
+  <div class="container" style="background-color: transparent">
     <center>  <h1> Login Form</h1> </center>
 
     <hr>

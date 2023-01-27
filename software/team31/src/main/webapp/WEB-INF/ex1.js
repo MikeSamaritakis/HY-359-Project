@@ -41,51 +41,55 @@
     }
 
     function showAdminLogin(){
+        document.getElementById("logintext").style.display = "none";
         document.getElementById("AdminLoginForm").style.display = "block";
         document.getElementById("myForm").style.display = "none";
         document.getElementById("GuestLoginForm").style.display = "none";
         document.getElementById("StudentLoginForm").style.display = "none";
         document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "none";
-        document.getElementsByName("LoginStudent").style.display = "none";
-        document.getElementsByName("LoginLibrarian").style.display = "none";
-        document.getElementsByName("LoginGuest").style.display = "none";
+        document.getElementById("LoginAdmin").style.display = "none";
+        document.getElementById("LoginStudent").style.display = "none";
+        document.getElementById("LoginLibrarian").style.display = "none";
+        document.getElementById("LoginGuest").style.display = "none";
     }
 
     function showGuestLogin(){
+        document.getElementById("logintext").style.display = "none";
         document.getElementById("GuestLoginForm").style.display = "block";
         document.getElementById("AdminLoginForm").style.display = "none";
         document.getElementById("myForm").style.display = "none";
         document.getElementById("StudentLoginForm").style.display = "none";
         document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "none";
-        document.getElementsByName("LoginStudent").style.display = "none";
-        document.getElementsByName("LoginLibrarian").style.display = "none";
-        document.getElementsByName("LoginGuest").style.display = "none";
+        document.getElementById("LoginAdmin").style.display = "none";
+        document.getElementById("LoginStudent").style.display = "none";
+        document.getElementById("LoginLibrarian").style.display = "none";
+        document.getElementById("LoginGuest").style.display = "none";
     }
 
     function showStudentLogin(){
+        document.getElementById("logintext").style.display = "none";
         document.getElementById("StudentLoginForm").style.display = "block";
         document.getElementById("AdminLoginForm").style.display = "none";
         document.getElementById("myForm").style.display = "none";
         document.getElementById("GuestLoginForm").style.display = "none";
         document.getElementById("LibrarianLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "none";
-        document.getElementsByName("LoginStudent").style.display = "none";
-        document.getElementsByName("LoginLibrarian").style.display = "none";
-        document.getElementsByName("LoginGuest").style.display = "none";
+        document.getElementById("LoginAdmin").style.display = "none";
+        document.getElementById("LoginStudent").style.display = "none";
+        document.getElementById("LoginLibrarian").style.display = "none";
+        document.getElementById("LoginGuest").style.display = "none";
     }
 
     function showLibrarianLogin(){
+        document.getElementById("logintext").style.display = "none";
         document.getElementById("LibrarianLoginForm").style.display = "block";
         document.getElementById("AdminLoginForm").style.display = "none";
         document.getElementById("myForm").style.display = "none";
         document.getElementById("GuestLoginForm").style.display = "none";
         document.getElementById("StudentLoginForm").style.display = "none";
-        document.getElementsByName("LoginAdmin").style.display = "none";
-        document.getElementsByName("LoginStudent").style.display = "none";
-        document.getElementsByName("LoginLibrarian").style.display = "none";
-        document.getElementsByName("LoginGuest").style.display = "none";
+        document.getElementById("LoginAdmin").style.display = "none";
+        document.getElementById("LoginStudent").style.display = "none";
+        document.getElementById("LoginLibrarian").style.display = "none";
+        document.getElementById("LoginGuest").style.display = "none";
     }
 
     function Mismatch() {
@@ -135,13 +139,22 @@
         }
         if(num>(parseInt(pw.length/2))){
             document.getElementById("sw").innerHTML="Weak password";
+            document.getElementById("sw").style.display = "block";
+            document.getElementById("ss").style.display = "none";
+            document.getElementById("sm").style.display = "none";
             returnToPreviousPage();
             return false;
         }else if(cap >= 1 && sml >= 1 && sym >= 2){
             document.getElementById("ss").innerHTML="Strong password";
+            document.getElementById("ss").style.display = "block";
+            document.getElementById("sw").style.display = "none";
+            document.getElementById("sm").style.display = "none";
             return true;
         }else{
             document.getElementById("sm").innerHTML="Medium password";
+            document.getElementById("sm").style.display = "block";
+            document.getElementById("ss").style.display = "none";
+            document.getElementById("sw").style.display = "none";
             return true;
         }
     }

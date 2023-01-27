@@ -8,12 +8,14 @@
     padding: 15px;  
     margin: 5px 0 22px 0;  
     display: inline-block;  
-    border: none;  
-    background: #f1f1f1;  
+    border: none;
+    background: #f1f1f1;
+    opacity: 0.7;
   }
 
-  input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
-    background-color: rgb(198, 198, 198);  
+  input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=date]:focus, input[type=url]:focus{
+    background-color: lightgray;
+    color: black;
     outline: none;  
   }
 
@@ -23,15 +25,9 @@
     margin: 0 auto;
   }
 
-  .log {
-    text-align: center;
-    width: 960px;
-    margin: 0 auto;
-  }
-
   .container {  
     background-color: rgb(255, 255, 255);
-    padding: 50px;    
+    padding: 50px;
   }
 
   div {
@@ -40,7 +36,7 @@
     
   hr {  
     border: 1px solid #f1f1f1;  
-    margin-bottom: 25px;  
+    margin-bottom: 25px;
   }
 
   .regbtn {
@@ -50,9 +46,10 @@
     cursor: pointer;
     width: 50%;
     opacity: 0.9;
-    background-color: #4CAF50;
+    background-color: #6f15c7;
     color: white;
     border-radius: 8px;
+    transition: 0.3s;
   }
    
   .registerbtn:hover {  
@@ -83,8 +80,35 @@
     opacity: 0.9;
     color: white;
     border-radius: 8px;
+    background-color: #6f15c7; color: white;
+    margin: 5px;
+    transition: 0.3s;
+  }
+
+  .buttonlog {
+    margin-left: 75%;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0.9;
+    color: white;
+    border-radius: 8px;
     background-color: #f1f1f1; color: black;
     margin: 5px;
+    transition: 0.3s;
+    height: 1%;
+  }
+
+  .buttonlogreg:hover {opacity: 0.6}
+
+  .buttonlog:hover {
+    background-color: #6f15c7;
+    color: white;
+  }
+
+  .regbtn:hover {
+    background-color: #00D100;
+    color: white;
   }
 
   .email {
@@ -92,31 +116,75 @@
     border: 2px solid #f1f1f1;
     width: 100%;
     padding: 15px;
-    background-color: #f1f1f1; color: black;
+    background: #f1f1f1;
+    color: black;
+    opacity: 0.7;
+    border: none;
   }
 
-  .border {
-    border: 2px solid #f1f1f1;
+  .pos {
+    border: none;
     color: black;
-    background-color: white;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    width: 100%;
+    height: 2%;
+  }
+
+  .move2 {
+    margin-right: 75%;
+    display: inline;
+  }
+
+  .sps {
+    border: none;
+    cursor: pointer;
+    height: 0.7%;
+    width: 20%;
+    border-radius: 8px;
+    background-color: #f1f1f1; color: black;
+    margin-right: 100%;
+    transition: 0.3s;
+    opacity: 0.4;
   }
 
   .showpmes {
-    margin-right: 81%;
+    margin-right: 80%;
+    display: none;
   }
 
   .date {
-    margin-right: 85%;
-    border: 2px solid #f1f1f1;
+    border: none;
     color: black;
-    background-color: white;
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 1.3%;
+    opacity: 0.8;
   }
 
   .genders {
-    margin-right: 75%;
+    background-color: #f1f1f1;
+    border: none;
+    width: 100%;
+    height: 0.7%;
+    opacity: 0.8;
+  }
+
+  .ut {
+    background-color: #f1f1f1;
+    border: none;
+    width: 100%;
+    height: 1.3%;
+    opacity: 0.8;
   }
 
   .terms {
     margin-right: 80%;
+  }
+
+  #grad1 {
+    height: 600%;
+    background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, #6f15c7, white, white, white );
   }
 
