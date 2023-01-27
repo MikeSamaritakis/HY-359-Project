@@ -25,7 +25,7 @@
                 <button class="buttonlog" id="LoginGuest" onclick='showGuestLogin()' style="display: none">Guest</button> </center>
         </div>
 
-        <form id="myForm" onsubmit ="return Mismatch()" method="post" action="/Register" style="display: none">
+        <form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register" style="display: none">
             <div class="container" style="background-color: transparent">
                 <center>  <h1> Registration Form</h1> </center>
                 <hr>
@@ -76,7 +76,7 @@
                 </div>
                 <br>
                 <div class="pad">
-                    <label style="margin-right: 94%;" for="start" name="Birthdate"><b>*Date :</b></label>
+                    <label style="margin-right: 88%;" for="start" name="Birthdate"><b>*Date of Birth:</b></label>
                     <div>
                         <input class="date" type="date" id="start" name="Birthdate"
                                value="1980-01-01"
