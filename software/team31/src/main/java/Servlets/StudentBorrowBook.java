@@ -1,4 +1,4 @@
-package Servlets.Functions;
+package Servlets;
 
 import database.DB_Connection;
 import java.sql.*;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.io.*;
 
-@WebServlet("/StudentBorrowBook")
+@WebServlet()
 public class StudentBorrowBook extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
@@ -34,7 +34,7 @@ public class StudentBorrowBook extends HttpServlet {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        String query = "select username from students";
+        String query = "select isbn from books";
         Statement stmt = null;
         try {
             stmt = DB_Connection.getConnection().createStatement();

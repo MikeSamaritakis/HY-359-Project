@@ -1,4 +1,4 @@
-package Servlets.Functions;
+package Servlets;
 
 import database.tables.EditLibrarianTable;
 import database.tables.EditStudentsTable;
@@ -9,7 +9,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet("/AdminDeleteUser")
+@WebServlet()
 public class AdminDeleteUser extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 

@@ -4,4 +4,105 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+<!--   ola ta servlets gia na einai accesible theloun na yparxoyn sto web xml ,gia na to dhloseis prepei na exeis servlet name -->
+<!--     kai servlet class kai an exeis dhlomeno ena servlet prepei na exei kai mapping to servlet class einai to path-->
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>Servlets.Register</servlet-class>
+  </servlet>
+<servlet>
+  <servlet-name>StudentLibrarian</servlet-name>
+  <servlet-class>Servlets.StudentLibrarian</servlet-class>
+</servlet>
+  <servlet>
+    <servlet-name>StudentBorrowBook</servlet-name>
+    <servlet-class>Servlets.StudentBorrowBook</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminGuest</servlet-name>
+    <servlet-class>Servlets.AdminGuest</servlet-class>
+  </servlet>
+<servlet>
+  <servlet-name>StudentReviewBook</servlet-name>
+  <servlet-class>Servlets.StudentReviewBook</servlet-class>
+</servlet>
+  <servlet>
+    <servlet-name>LibrarianViewActiveBorrows</servlet-name>
+    <servlet-class>Servlets.LibrarianViewActiveBorrows</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LibrarianUpdateStatus</servlet-name>
+    <servlet-class>Servlets.LibrarianViewActiveBorrows</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LibrarianAddBook</servlet-name>
+    <servlet-class>Servlets.LibrarianAddBook</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditInfo</servlet-name>
+    <servlet-class>Servlets.EditInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminViewUser</servlet-name>
+    <servlet-class>Servlets.AdminViewUser</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminDeleteUser</servlet-name>
+    <servlet-class>Servlets.AdminDeleteUser</servlet-class>
+  </servlet>
+<!--edo bazeis to servlet name kai ti url thes na tou doseis ston server sou-->
+  <servlet-mapping>
+    <servlet-name>AdminDeleteUser</servlet-name>
+    <url-pattern>/AdminDelete/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminViewUser</servlet-name>
+    <url-pattern>/AdminOverview/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentBorrowBook</servlet-name>
+    <url-pattern>/BookBorrow/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditInfo</servlet-name>
+    <url-pattern>/EditInfo/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LibrarianAddBook</servlet-name>
+    <url-pattern>/AddBook/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LibrarianUpdateStatus</servlet-name>
+    <url-pattern>/LibrarianUpdate/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LibrarianViewActiveBorrows</servlet-name>
+    <url-pattern>/LibrarianViewBorrows/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentReviewBook</servlet-name>
+    <url-pattern>/StudentReviewBook/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentLibrarian</servlet-name>
+    <url-pattern>/StudentLibrarian/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AdminGuest</servlet-name>
+    <url-pattern>/AdminGuest/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+<!--poio einai to welcome page sou-->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
 </web-app>
