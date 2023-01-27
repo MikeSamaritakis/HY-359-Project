@@ -1,0 +1,22 @@
+#grad1 {
+    height: 1000px;
+    background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(orange, #EC6F66, white);
+}
+
+.vertical {
+    border-left: 4px solid black;
+    height: 800px;
+    position:absolute;
+    left: 15%;
+}
+
+.solid {
+    border-top: 3px solid white;
+    width: 70%;
+}
+
+.wt{
+    font-family: "Courier New";
+    color: white;
+}

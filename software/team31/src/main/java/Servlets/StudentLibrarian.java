@@ -69,7 +69,9 @@ public class StudentLibrarian extends HttpServlet {
 
         writer.close();
         writer.flush();
-        response.sendRedirect("http://localhost:8080/team31_war_exploded/SELIDALOGINSTUDENT");
+        RequestDispatcher dispatcher =
+                getServletContext().getRequestDispatcher("http://localhost:8080/team31_war_exploded/BorrowBook");
+        dispatcher.include(request, response);
     }
 
     @Override
