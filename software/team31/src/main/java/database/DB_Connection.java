@@ -75,4 +75,11 @@ public class DB_Connection {
         }
         return object;
     }
+
+    public static Connection closeConnection() throws SQLException, ClassNotFoundException {
+        closeConnection().close();
+        System.out.println("Disconnected from database.");
+        return null;
+    }
+
 }
