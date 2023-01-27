@@ -465,7 +465,7 @@
         </form>
 
         <div class="logreg">
-            <form id="AdminLoginForm" method="get" action="/AdminGuest" style="display: none">
+            <form id="AdminLoginForm" method="get" action="AdminGuest" style="display: none">
                 <div class="container" style="background-color: transparent">
                     <center>  <h1> Login Form</h1> </center>
 
@@ -489,7 +489,7 @@
                 </div>
             </form>
 
-            <form id="GuestLoginForm" method="post" action="/AdminGuest" style="display: none">
+            <form id="GuestLoginForm" method="post" action="AdminGuest" style="display: none">
                 <div class="container" style="background-color: transparent">
                     <center>  <h1> Login Form</h1> </center>
 
@@ -504,7 +504,7 @@
                 </div>
             </form>
 
-            <form id="StudentLoginForm" method="get" action="/StudentLibrarian" style="display: none">
+            <form id="StudentLoginForm" method="get" action="StudentLibrarian" style="display: none">
                 <div class="container" style="background-color: transparent">
                     <center>  <h1> Login Form</h1> </center>
 
@@ -528,7 +528,7 @@
                 </div>
             </form>
 
-            <form id="LibrarianLoginForm" method="post" action="/StudentLibrarian" style="display: none">
+            <form id="LibrarianLoginForm" method="post" action="StudentLibrarian" style="display: none">
                 <div class="container" style="background-color: transparent">
                     <center>  <h1> Login Form</h1> </center>
 
