@@ -119,7 +119,10 @@ td {
     opacity: 0.8;
     background: white;
     margin-left: 0.5%;
+    transition: 0.3s;
 }
+
+.subbtn:hover {opacity: 0.6}
 
 .align {
     display: flex;
