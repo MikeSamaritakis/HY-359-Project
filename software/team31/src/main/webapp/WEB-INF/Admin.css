@@ -109,6 +109,21 @@ td {
 }
 
 .subbtn {
-    width: 20%;
-    height: 5%;
+    position: relative;
+    font-family: Arial;
+    width: 38px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    color: #EC6F66;
+    opacity: 0.8;
+    background: white;
+    margin-left: 0.5%;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
