@@ -75,6 +75,7 @@ public class AdminGuest extends HttpServlet {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
+
         }
 
         String query = "select username from students";
@@ -91,7 +92,7 @@ public class AdminGuest extends HttpServlet {
         ResultSet rs;
 
         try {
-            rs = stmt.executeQuery("select username from students");
+            rs = stmt.executeQuery(query);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
