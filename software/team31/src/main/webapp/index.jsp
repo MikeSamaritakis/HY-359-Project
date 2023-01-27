@@ -25,7 +25,7 @@
                 <button class="buttonlog" id="LoginGuest" onclick='showGuestLogin()' style="display: none">Guest</button> </center>
         </div>
 
-        <form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register" style="display: none">
+        <form id="myForm" onsubmit ="return Mismatch()" method="post" action="Register" style="display: none" >
             <div class="container" style="background-color: transparent">
                 <center>  <h1> Registration Form</h1> </center>
                 <hr>
@@ -46,12 +46,12 @@
                         <input id="text1" type="checkbox" onclick="ShowPass1()">
                         <label for="text1"> Show Password</label>
                     </div>
-                    <div>
-                        <button class="sps" onclick="PassStrength()"> see password's strength </button>
-                        <span class="showpmes" id = "sw" style="color:red" > </span>
-                        <span class="showpmes" id = "ss" style="color:rgb(85, 212, 0)"> </span>
-                        <span class="showpmes" id = "sm" style="color:rgb(255, 141, 28)"> </span><br></br><br>
-                    </div>
+
+                    <button class="sps" onclick="PassStrength()"> see password's strength </button>
+                    <span class="showpmes" id = "sw" style="color:red" > </span>
+                    <span class="showpmes" id = "ss" style="color:rgb(0, 209, 0)"> </span>
+                    <span class="showpmes" id = "sm" style="color:rgb(255, 141, 28)"> </span>
+
                 </div>
 
                 <div class="pad">
