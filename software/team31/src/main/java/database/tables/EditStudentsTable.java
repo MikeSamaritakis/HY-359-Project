@@ -94,7 +94,7 @@ public class EditStudentsTable {
             Student user = gson.fromJson(json, Student.class);
             return user;
         } catch (Exception e) {
-            System.err.println("Got an exception! ");
+            System.out.println("Got an exception! ");
             System.err.println(e.getMessage());
             System.out.println("WRONG CREDENTIALS!");
         }
