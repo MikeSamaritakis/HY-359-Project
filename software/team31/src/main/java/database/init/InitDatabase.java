@@ -7,23 +7,16 @@ package database.init;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
-import database.tables.EditBooksTable;
+import database.tables.*;
+
 import static database.DB_Connection.getInitialConnection;
-import database.tables.EditAdminMessageTable;
-import database.tables.EditReviewsTable;
-import database.tables.EditBorrowingTable;
-import database.tables.EditLibrarianTable;
-import database.tables.EditStudentsTable;
-import database.tables.EditBooksInLibraryTable;
-import database.tables.GeneralQueries;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import mainClasses.Book;
-import mainClasses.Librarian;
-import mainClasses.Review;
-import mainClasses.Student;
+
+import mainClasses.*;
 
 /*
  *
@@ -72,6 +65,8 @@ public class InitDatabase {
         EditAdminMessageTable eam = new EditAdminMessageTable();
         eam.createAdminMessageTable();
 
+        EditAdminsTable admin = new EditAdminsTable();
+        admin.createAdminTable();
     }
 
     public void addToDatabaseExamples() throws ClassNotFoundException, SQLException {
