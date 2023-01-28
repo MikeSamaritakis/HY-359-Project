@@ -136,5 +136,6 @@ public class EditInfo extends HttpServlet {
                 throw new RuntimeException(e);
             }
         }
+        response.sendRedirect("Librarian.html");
     }
 }
