@@ -220,35 +220,35 @@ public class EditStudentsTable {
         }
     }
 
-    public void updateStudentusername(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
+    public static void updateStudentusername(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
         String update = "UPDATE students SET username='" +  usernamenew + "' WHERE username = '" + usernameog + "'";
         stmt.executeUpdate(update);
     }
 
-    public void updateStudentpassword(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
+    public static void updateStudentpassword(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
         String update = "UPDATE students SET password='" +  usernamenew + "' WHERE password = '" + usernameog + "'";
         stmt.executeUpdate(update);
     }
 
-    public void updateStudentemail(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
+    public static void updateStudentemail(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
         String update = "UPDATE students SET email='" +  usernamenew + "' WHERE email = '" + usernameog + "'";
         stmt.executeUpdate(update);
     }
 
-    public void updateStudentfirstname(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
+    public static void updateStudentfirstname(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
         String update = "UPDATE students SET firstname='" +  usernamenew + "' WHERE firstname = '" + usernameog + "'";
         stmt.executeUpdate(update);
     }
 
-    public void updateStudentlastname(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
+    public static void updateStudentlastname(String usernameog, String usernamenew) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
         String update = "UPDATE students SET lastname='" +  usernamenew + "' WHERE lastname = '" + usernameog + "'";
