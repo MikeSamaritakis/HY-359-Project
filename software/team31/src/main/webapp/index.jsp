@@ -489,7 +489,7 @@
                 </div>
             </form>
 
-            <form id="GuestLoginForm" method="post" action="AdminGuest" style="display: none">
+            <form id="GuestLoginForm" method="post" action="Guest.html" style="display: none">
                 <div class="container" style="background-color: transparent">
                     <center>  <h1> Login Form</h1> </center>
 
