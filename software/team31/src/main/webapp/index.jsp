@@ -465,7 +465,7 @@
         </form>
 
         <div class="logreg">
-            <form id="AdminLoginForm" method="get" action="AdminGuest" style="display: none">
+            <form id="AdminLoginForm" method="get" action="Admin.html" style="display: none">
                 <div class="container" style="background-color: transparent">
                     <center>  <h1> Login Form</h1> </center>
 
