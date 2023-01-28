@@ -38,17 +38,133 @@ import java.sql.*;
 public class EditInfo extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
-    public EditInfo(){
-        super();
-    }
+//    public EditInfo(){
+//        super();
+//    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //  Edit info for Students
+        String username = request.getParameter("editusername");
+        String password = request.getParameter("editpassword");
+        String email = request.getParameter("editemail");
+        String firstname = request.getParameter("editfirstname");
+        String lastname = request.getParameter("editlastname");
+
+        Student stu = new Student();
+        try {
+            stu = EditStudentsTable.databaseToStudent(username, password);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        String usernameog = stu.getUsername();
+
+        if (username != null){
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, username);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (password != null) {
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, password);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (email != null) {
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, email);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (firstname != null) {
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, firstname);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (lastname != null) {
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, lastname);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //  Edit info for Librarians
+        String username = request.getParameter("editusernamel");
+        String password = request.getParameter("editpasswordl");
+        String email = request.getParameter("editemaill");
+        String firstname = request.getParameter("editfirstnamel");
+        String lastname = request.getParameter("editlastnamel");
+
+        Librarian lib = new Librarian();
+        try {
+            lib = EditLibrarianTable.databaseToLibrarian(username, password);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        String usernameog = lib.getUsername();
+
+        if (username != null){
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, username);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (password != null) {
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, password);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (email != null) {
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, email);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (firstname != null) {
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, firstname);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        } else if (lastname != null) {
+            try {
+                EditStudentsTable.updateStudentusername(usernameog, lastname);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }

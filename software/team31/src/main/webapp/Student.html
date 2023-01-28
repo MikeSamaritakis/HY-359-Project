@@ -22,7 +22,7 @@
         <i class="fas fa-search"></i>
     </div>
 
-<form>
+<form method="get" action="/EditInfo">
 <div class="pst">
 <div class="container">
     <div class="card">
@@ -33,27 +33,27 @@
         <div class="forms" style="display:none" id="editform">
         <div class="inputs">
             <span>First Name :</span>
-            <input type="text" readonly value="">
+            <input type="text" readonly value="" name="editfirstname">
         </div>
             <div class="inputs">
         <span>Last Name :</span>
-        <input type="text" readonly value="">
+        <input type="text" readonly value="" name="editlastname">
             </div>
         <div class="inputs"> <span>Email :</span>
-            <input type="text" readonly value="">
+            <input type="text" readonly value="" name="editemail">
         </div>
         <div class="inputs">
             <span>UserName :</span>
-            <input type="text" readonly value="">
+            <input type="text" readonly value="" name="editusername">
         </div>
             <div class="inputs">
                 <span>PassWord :</span>
-                <input type = "password" name="Password" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" minlength="8" maxlength="12" value = "">
+                <input type = "password" name="editpassword" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" minlength="8" maxlength="12" value = "">
                <br> <label class="txt">Show Password :</label>
                 <input id="check" type="checkbox" onclick="ShowPass1()" class="box2">
             </div>
             <center>
-            <button type="submit" id="save" class="btn">submit</button>
+            <button type="submit" id="save" class="btn" value="Call Servlet">Update</button>
             </center>
     </div>
     </div>
