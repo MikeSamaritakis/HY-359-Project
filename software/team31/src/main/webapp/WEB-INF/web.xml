@@ -51,14 +51,14 @@
     <servlet-name>AdminDeleteUser</servlet-name>
     <servlet-class>Servlets.AdminDeleteUser</servlet-class>
   </servlet>
-<!--edo bazeis to servlet name kai ti url thes na tou doseis ston server sou-->
+<!--Here you enter the servlet name and the corresponding URL.-->
   <servlet-mapping>
     <servlet-name>AdminDeleteUser</servlet-name>
     <url-pattern>/AdminDelete/*</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AdminViewUser</servlet-name>
-    <url-pattern>/AdminViewUser/*</url-pattern>
+    <url-pattern>/AdminOverview/*</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>StudentBorrowBook</servlet-name>
@@ -100,7 +100,7 @@
   
   
   
-<!--poio einai to welcome page sou-->
+<!--Defines the welcome page.-->
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
