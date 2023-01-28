@@ -3,6 +3,7 @@
     background-color: white; /* For browsers that do not support gradients */
     background-image: linear-gradient(orange, #EC6F66, white);
     overflow: hidden;
+    block-size: content-box;
 }
 
 .vertical {
@@ -117,6 +118,7 @@ footer {
     color: #FFFFFF;
     outline: none;
     transition: .5s;
+    position: absolute;
 }
 .box:hover input{
     width: 300px;
@@ -245,7 +247,6 @@ footer {
 .txt1 {
     color: white;
     font-size: x-large;
-    display: inline-block;
     font-family: "Courier New";
 }
 
@@ -257,7 +258,6 @@ footer {
 .search {
     display: flex;
     margin-left: 20%;
-    justify-content:space-between;
 }
 
 .cont {
