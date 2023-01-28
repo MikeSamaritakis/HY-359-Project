@@ -1,32 +1,17 @@
-package mainClasses;
+package database.tables;
 
+import com.google.gson.Gson;
 import database.DB_Connection;
+import mainClasses.Admin;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class CreateAdmin {
-    String username, password;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setMessage_id(String username2) {
-        this.username = username2;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password2) {
-        this.password = password2;
-    }
-
+public class EditAdminsTable extends Admin{
 
     public void createAdminTable() throws SQLException, ClassNotFoundException {
 
@@ -62,8 +47,28 @@ public class CreateAdmin {
             System.out.println("# The admin was successfully added in the database.");
             stmt.close();
         } catch (SQLException ex) {
-            Logger.getLogger(CreateAdmin.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EditAdminsTable.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public static Admin databaseToAdmin(String username, String password) throws SQLException, ClassNotFoundException{
+        Connection con = DB_Connection.getConnection();
+        Statement stmt = con.createStatement();
+
+        ResultSet rs;
+        try {
+            rs = stmt.executeQuery("SELECT * FROM admins WHERE username = '" + username + "' AND password='"+password+"'");
+            rs.next();
+            String json=DB_Connection.getResultsToJSON(rs);
+            Gson gson = new Gson();
+            Admin admin = gson.fromJson(json, EditAdminsTable.class);
+            return admin;
+        } catch (Exception e) {
+            System.out.println("Got an exception! ");
+            System.err.println(e.getMessage());
+            System.out.println("WRONG ADMIN CREDENTIALS!");
+        }
+        return null;
     }
 
 }
