@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="Librarian.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="grad1">
+<center><h1 class="wt"> Welcome Librarian! </h1> </center>
+
+<center><div class="solid"></div></center>
+<form id="newbook" method="get" action="/LibrarianAddBook"><br>
+    <label><b> Add book isbn :</b></label>
+    <input type = "text" placeholder="ISBN" name="newisbn" id="newisbn"><br>
+
+    <label><b> Add book title :</b></label>
+    <input type = "text" placeholder="Title" name="newtitle" id="newtitle"><br>
+
+    <label><b> Add book authors :</b></label>
+    <input type = "text" placeholder="Authors" name="newauthors" id="newauthors"><br>
+
+    <label><b> Add book genre :</b></label>
+    <input type = "text" placeholder="Genre" name="newgenre" id="newgenre"><br>
+
+    <label><b> Add book URL :</b></label>
+    <input type = "text" placeholder="URL" name="newURL" id="newURL"><br>
+
+    <label><b> Add book photo url :</b></label>
+    <input type = "text" placeholder="Photo URL" name="newphoto" id="newphoto"><br>
+
+    <label><b> Add book pages :</b></label>
+    <input type = "number" placeholder="Photo URL" name="newpages" id="newpages"><br>
+
+    <label><b> Add book publication year :</b></label>
+    <input type = "number" placeholder="Publication Year" name="newpublicationyear" id="newpublicationyear"><br>
+
+    <button type="submit" value="Call Servlet">Add Book</button>
+</form>
+</body>
+</html>

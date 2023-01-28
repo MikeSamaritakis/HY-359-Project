@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="Student.css">
+<head>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="grad1"><br>
+<center><h1 class="wt"> Welcome Student! </h1> </center><br>
+
+<center><div class="solid"></div></center><br>
+
+<div class="search">
+    <div class="box">
+        <form name="search">
+            <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+            <label class="txt1"> Search book...</label>
+        </form>
+        <i class="fas fa-search"></i>
+
+    </div>
+<form>
+<div class="pst">
+<div class="container">
+    <div class="card">
+        <div class="info">
+            <span class="pfl">Profile</span>
+            <button type="button" id="savebutton">edit</button>
+        </div>
+        <div class="forms" style="display:none" id="editform">
+        <div class="inputs">
+            <span>First Name :</span>
+            <input type="text" readonly value="">
+        </div>
+            <div class="inputs">
+        <span>Last Name :</span>
+        <input type="text" readonly value="">
+            </div>
+        <div class="inputs"> <span>Email :</span>
+            <input type="text" readonly value="">
+        </div>
+        <div class="inputs">
+            <span>UserName :</span>
+            <input type="text" readonly value="">
+        </div>
+            <div class="inputs">
+                <span>PassWord :</span>
+                <input type = "password" name="Password" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" minlength="8" maxlength="12" value = "">
+               <br> <label class="txt">Show Password :</label>
+                <input id="check" type="checkbox" onclick="ShowPass1()" class="box2">
+
+            </div>
+            <center>
+            <button type="submit" id="save" class="btn">submit</button>
+            </center>
+    </div>
+    </div>
+</div>
+</div>
+</form>
+
+</div>
+    
+<footer>
+    <p><b class="cont">Contact Us:</b></p>
+    <div>
+    <div class="col">
+        <img src="img/phone.png" width="40"
+             height="40" alt="phone Icon" style="margin-bottom: 1%">
+        phone number: 2810234417
+    </div>
+    <div class="col">
+        <img src="img/gmail.png" width="40"
+             height="40" alt="Gmail Icon" style="margin-bottom: 1%">
+        email: books@gmail.com
+    </div>
+    <div class="col">
+        <img src="img/insta.png" width="40"
+             height="40" alt="insta Icon" style="margin-bottom: 1%">
+        insta: @_books_
+    </div>
+    </div>
+</footer>
+
+<script>
+    var x, i, j, l, ll, selElmnt, a, b, c;
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    for (i = 0; i < l; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        ll = selElmnt.length;
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < ll; j++) {
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function(e) {
+                var y, i, k, s, h, sl, yl;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                sl = s.length;
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < sl; i++) {
+                    if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        yl = y.length;
+                        for (k = 0; k < yl; k++) {
+                            y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                    }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function(e) {
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+        });
+    }
+    function closeAllSelect(elmnt) {
+        var x, y, i, xl, yl, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        xl = x.length;
+        yl = y.length;
+        for (i = 0; i < yl; i++) {
+            if (elmnt == y[i]) {
+                arrNo.push(i)
+            } else {
+                y[i].classList.remove("select-arrow-active");
+            }
+        }
+        for (i = 0; i < xl; i++) {
+            if (arrNo.indexOf(i)) {
+                x[i].classList.add("select-hide");
+            }
+        }
+    }
+    document.addEventListener("click", closeAllSelect);
+</script>
+
+<script>
+    var savebutton = document.getElementById('savebutton');
+    var readonly = true;
+    var inputs = document.querySelectorAll('input[type="text"]');
+    savebutton.addEventListener('click',function(){
+
+        for (var i=0; i<inputs.length; i++) {
+            inputs[i].toggleAttribute('readonly');
+        };
+
+        if (savebutton.innerHTML == "edit") {
+            savebutton.innerHTML = "info";
+            document.getElementById("editform").style.display = "block";
+        } else {
+            savebutton.innerHTML = "edit";
+            document.getElementById("editform").style.display = "none";
+        }
+    });
+</script>
+
+<script>
+    function ShowPass1() {
+        var x = document.getElementById("myInput1");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+
+</body>
+</html>
