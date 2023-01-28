@@ -1,7 +1,8 @@
 #grad1 {
-    height: 1000px;
+    height: 2000px;
     background-color: white; /* For browsers that do not support gradients */
     background-image: linear-gradient(orange, #EC6F66, white);
+    overflow: hidden;
 }
 
 .vertical {
@@ -21,3 +22,173 @@
     color: white;
 }
 
+footer {
+    margin-top: 35%;
+    background-image: linear-gradient(transparent, #5D3891);
+    width: 100%;
+    opacity: 0.6;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Courier New";
+    color: black;
+    font-size: x-large;
+}
+
+.cont {
+    color: black;
+    font-family: "Courier New";
+    font-size: xx-large;
+    border-radius: 8px;
+}
+
+.col {
+    display: inline-flex;
+    padding: 3%;
+    font-family: "Courier New";
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:transparent;
+}
+
+.card{
+    width:700px;
+    height:510px;
+    background-color:transparent;
+    box-shadow:0px 15px 30px transparent;
+    border-radius:10px;
+    overflow:hidden;
+    margin-right: 50%;
+}
+
+.card .info{
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid white;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 8px;
+}
+
+.card .info button{
+    height:30px;
+    width:80px;
+    border:none;
+    color:#fff;
+    border-radius:8px;
+    background-color:orange;
+    opacity: 0.7;
+    cursor:pointer;
+    text-transform:uppercase;
+}
+
+.card .forms{
+    padding:15px
+}
+
+.card .inputs{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:10px;
+}
+
+.card .inputs span{
+    font-size:12px;
+    color: white;
+}
+
+.card .inputs input{
+    height:40px;
+    padding:0px 10px;
+    font-size:17px;
+    outline:none;
+    background-color: white;
+    box-shadow:0px 15px 30px rgba(0,0,0,0.09);
+    border: none;
+    border-radius: 8px;
+    opacity: 0.7;
+}
+
+.card .inputs input[type="text"][readonly]{
+    border: 2px solid transparent;
+}
+
+.pst {
+    margin-left: 62%;
+    position: absolute;
+}
+
+.pfl {
+    color: orange;
+    font-size: x-large;
+    font-family: "Courier New";
+}
+
+.btn {
+    height:30px;
+    width:80px;
+    border:none;
+    color:orange;
+    border-radius:8px;
+    background-color:white;
+    opacity: 0.8;
+    cursor:pointer;
+    text-transform:uppercase;
+}
+
+.txt {
+    color: white;
+    font-size: small;
+    display: inline-block;
+    margin-left: 68%;
+}
+
+.box2 {
+    width: 4%;
+    display: inline-block;
+    margin-left: 95.5%;
+}
+
+.edit {
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 8px;
+    border: none;
+    color: black;
+    font-family: "Courier New";
+    font-size: medium;
+    padding: 5%;
+    box-shadow:0px 15px 30px rgba(0,0,0,0.09);
+    outline:none;
+    block-size: 3%;
+}
+
+.search {
+    display: flex;
+    margin-left: 25%;
+    padding: 2%;
+    position: absolute;
+}
+
+.txtedit {
+    font-family: "Courier New";
+    color: white;
+    font-size: medium;
+}
+
+.positionall {
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 5%;
+
+}

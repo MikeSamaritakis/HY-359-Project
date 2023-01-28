@@ -6,62 +6,144 @@
     <title>Title</title>
 </head>
 <body id="grad1">
-<center><h1 class="wt"> Welcome Librarian! </h1> </center>
 
-<center><div class="solid"></div></center>
-<form id="newbook" method="get" action="/LibrarianAddBook"><br>
-    <label><b> Add book isbn :</b></label>
-    <input type = "text" placeholder="ISBN" name="newisbn" id="newisbn"><br>
+<div class="positionall">
 
-    <label><b> Add book title :</b></label>
-    <input type = "text" placeholder="Title" name="newtitle" id="newtitle"><br>
+    <div class="search">
+        <form id="newbook" method="get" action="/LibrarianAddBook"><br>
 
-    <label><b> Add book authors :</b></label>
-    <input type = "text" placeholder="Authors" name="newauthors" id="newauthors"><br>
-
-    <label><b> Add book genre :</b></label>
-    <input type = "text" placeholder="Genre" name="newgenre" id="newgenre"><br>
-
-    <label><b> Add book URL :</b></label>
-    <input type = "text" placeholder="URL" name="newURL" id="newURL"><br>
-
-    <label><b> Add book photo url :</b></label>
-    <input type = "text" placeholder="Photo URL" name="newphoto" id="newphoto"><br>
-
-    <label><b> Add book pages :</b></label>
-    <input type = "number" placeholder="Photo URL" name="newpages" id="newpages"><br>
-
-    <label><b> Add book publication year :</b></label>
-    <input type = "number" placeholder="Publication Year" name="newpublicationyear" id="newpublicationyear"><br>
-
-    <button type="submit" value="Call Servlet">Add Book</button>
-</form>
-
-<form id="editinfol" method="post" action="/EditInfo"><br>
-    <div class="inputs">
-        <span>First Name :</span>
-        <input type="text" readonly value="" name="editfirstnamel">
+        <label class="txtedit"> Add book isbn :</label><p>
+        <input class="edit" type = "text" placeholder="ISBN" name="newisbn" id="newisbn"><br>
+        <br>
+        <label class="txtedit"> Add book title :</label><p>
+        <input class="edit" type = "text" placeholder="Title" name="newtitle" id="newtitle"><br>
+        <br>
+        <label class="txtedit"> Add book authors :</label><p>
+        <input class="edit" type = "text" placeholder="Authors" name="newauthors" id="newauthors"><br>
+        <br>
+        <label class="txtedit"> Add book genre :</label><p>
+        <input class="edit" type = "text" placeholder="Genre" name="newgenre" id="newgenre"><br>
+        <br>
+        <label class="txtedit"> Add book URL :</label><p>
+        <input class="edit" type = "text" placeholder="URL" name="newURL" id="newURL"><br>
+        <br>
+        <label class="txtedit"> Add book photo url :</label><p>
+        <input class="edit" type = "text" placeholder="Photo URL" name="newphoto" id="newphoto"><br>
+        <br>
+        <label class="txtedit"> Add book pages :</label><p>
+        <input class="edit" type = "number" placeholder="Photo URL" name="newpages" id="newpages"><br>
+        <br>
+        <label class="txtedit"> Add book publication year :</label>
+        <input class="edit" type = "number" placeholder="Publication Year" name="newpublicationyear" id="newpublicationyear"><br>
+        <br>
+            <center>
+                <button type="submit" value="Call Servlet" class="btn">Add Book</button>
+            </center>
+    </form>
     </div>
-    <div class="inputs">
-        <span>Last Name :</span>
-        <input type="text" readonly value="" name="editlastnamel">
-    </div>
-    <div class="inputs"> <span>Email :</span>
-        <input type="text" readonly value="" name="editemaill">
-    </div>
-    <div class="inputs">
-        <span>UserName :</span>
-        <input type="text" readonly value="" name="editusernamel">
-    </div>
-    <div class="inputs">
-        <span>PassWord :</span>
-        <input type = "password" name="editpasswordl" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" minlength="8" maxlength="12" value = "">
-        <br> <label class="txt">Show Password :</label>
-        <input id="check" type="checkbox" onclick="ShowPass1()" class="box2">
-    </div>
+</div>
 
-    <button type="submit" value="Call Servlet">Update</button>
-</form>
+    <br>
+    <center><h1 class="wt"> Welcome Librarian! </h1> </center><br>
+
+    <center><div class="solid"></div></center><br>
+    <br>
+
+    <div clas="positionall">
+    <form method="get" action="/EditInfo">
+    <div class="pst">
+        <div class="container">
+            <div class="card">
+                <div class="info">
+                    <span class="pfl">Profile</span>
+                    <button type="button" id="savebutton">edit</button>
+                </div>
+                <div class="forms" style="display:none" id="editform">
+                    <div class="inputs">
+                        <span>First Name :</span>
+                        <input type="text" readonly value="" name="editfirstname" size="15" minlength="3" maxlength="30">
+                    </div>
+                    <div class="inputs">
+                        <span>Last Name :</span>
+                        <input type="text" readonly value="" name="editlastname" size="15" minlength="3" maxlength="30">
+                    </div>
+                    <div class="inputs"> <span>Email :</span>
+                        <input type="text" readonly value="" name="editemail">
+                    </div>
+                    <div class="inputs">
+                        <span>UserName :</span>
+                        <input type="text" readonly value="" name="editusername" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" minlength="8">
+                    </div>
+                    <div class="inputs">
+                        <span>PassWord :</span>
+                        <input type = "password" name="editpassword" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" minlength="8" maxlength="12" value = "">
+                        <br>
+                        <label class="txt">Show Password :</label>
+                        <input id="check" type="checkbox" onclick="ShowPass1()" class="box2">
+                    </div>
+                    <center>
+                        <button type="submit" id="save" class="btn" value="Call Servlet">Update</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+
+</div>
+
+</div>
+
+<footer>
+    <center><img src="img/book.png" width="40" height="40" alt="phone Icon">
+        <label class="cont">Contact Us</label>
+    <div>
+        <div class="col">
+            <img src="img/phone.png" width="40" height="40" alt="phone Icon">
+            phone number: 2810234417
+        </div>
+        <div class="col">
+            <img src="img/gmail.png" width="40" height="40" alt="Gmail Icon">
+            email: books@gmail.com
+        </div>
+        <div class="col">
+            <img src="img/insta.png" width="40" height="40" alt="insta Icon">
+            insta: @_books_
+        </div>
+    </div>
+    </center>
+</footer>
+
+<script>
+    var savebutton = document.getElementById('savebutton');
+    var readonly = true;
+    var inputs = document.querySelectorAll('input[type="text"]');
+    savebutton.addEventListener('click',function(){
+
+        for (var i=0; i<inputs.length; i++) {
+            inputs[i].toggleAttribute('readonly');
+        };
+
+        if (savebutton.innerHTML == "edit") {
+            savebutton.innerHTML = "info";
+            document.getElementById("editform").style.display = "block";
+        } else {
+            savebutton.innerHTML = "edit";
+            document.getElementById("editform").style.display = "none";
+        }
+    });
+</script>
+
+<script>
+    function ShowPass1() {
+        var x = document.getElementById("myInput1");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
 
 </body>
 </html>
