@@ -2,87 +2,92 @@
 <html lang="en">
 <link rel="stylesheet" href="Student.css">
 <head>
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body id="grad1"><br>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+<body id="grad1">
 
+<div class="positionall">
+
+    <div class="search">
+        <div class="box">
+            <form name="search">
+                <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+                <br><br><br><br><br>
+                <label class="txt1"> Search book...</label>
+            </form>
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+</div>
+
+<br>
 <center><h1 class="wt"> Welcome Student! </h1> </center><br>
 
 <center><div class="solid"></div></center><br>
+<br>
 
-<div class="search">
-    <div class="box">
-        <form name="search">
-            <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
-            <br><br><br><br><br>
-            <label class="txt1"> Search book...</label>
-        </form>
-        <i class="fas fa-search"></i>
-    </div>
-
-<form method="get" action="Edit">
-<div class="pst">
-<div class="container">
-    <div class="card">
-        <div class="info">
-            <span class="pfl">Profile</span>
-            <button type="button" id="savebutton">edit</button>
-        </div>
-        <div class="forms" style="display:none" id="editform">
-        <div class="inputs">
-            <span>First Name :</span>
-            <input type="text" readonly value="" name="editfirstname">
-        </div>
-            <div class="inputs">
-        <span>Last Name :</span>
-        <input type="text" readonly value="" name="editlastname">
+<div clas="positionall">
+    <form method="get" action="/EditInfo">
+        <div class="pst">
+            <div class="container">
+                <div class="card">
+                    <div class="info">
+                        <span class="pfl">Profile</span>
+                        <button type="button" id="savebutton">edit</button>
+                    </div>
+                    <div class="forms" style="display:none" id="editform">
+                        <div class="inputs">
+                            <span>First Name :</span>
+                            <input type="text" readonly value="" name="editfirstname" size="15" minlength="3" maxlength="30">
+                        </div>
+                        <div class="inputs">
+                            <span>Last Name :</span>
+                            <input type="text" readonly value="" name="editlastname" size="15" minlength="3" maxlength="30">
+                        </div>
+                        <div class="inputs"> <span>Email :</span>
+                            <input type="text" readonly value="" name="editemail">
+                        </div>
+                        <div class="inputs">
+                            <span>UserName :</span>
+                            <input type="text" readonly value="" name="editusername" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" minlength="8">
+                        </div>
+                        <div class="inputs">
+                            <span>PassWord :</span>
+                            <input type = "password" name="editpassword" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" minlength="8" maxlength="12" value = "">
+                            <br>
+                            <label class="txt">Show Password :</label>
+                            <input id="check" type="checkbox" onclick="ShowPass1()" class="box2">
+                        </div>
+                        <center>
+                            <button type="submit" id="save" class="btn" value="Call Servlet">Update</button>
+                        </center>
+                    </div>
+                </div>
             </div>
-        <div class="inputs"> <span>Email :</span>
-            <input type="text" readonly value="" name="editemail">
         </div>
-        <div class="inputs">
-            <span>UserName :</span>
-            <input type="text" readonly value="" name="editusername">
-        </div>
-            <div class="inputs">
-                <span>PassWord :</span>
-                <input type = "password" name="editpassword" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" minlength="8" maxlength="12" value = "">
-               <br> <label class="txt">Show Password :</label>
-                <input id="check" type="checkbox" onclick="ShowPass1()" class="box2">
-            </div>
-
-            <center>
-            <button type="submit" id="save" class="btn" value="Call Servlet">Update</button>
-            </center>
-    </div>
-    </div>
-</div>
-</div>
-</form>
-
+    </form>
 </div>
 
 <footer>
-    <p><b class="cont">Contact Us:</b></p>
-    <div>
-    <div class="col">
-        <img src="img/phone.png" width="40"
-             height="40" alt="phone Icon" style="margin-bottom: 1%">
-        phone number: 2810234417
-    </div>
-    <div class="col">
-        <img src="img/gmail.png" width="40"
-             height="40" alt="Gmail Icon" style="margin-bottom: 1%">
-        email: books@gmail.com
-    </div>
-    <div class="col">
-        <img src="img/insta.png" width="40"
-             height="40" alt="insta Icon" style="margin-bottom: 1%">
-        insta: @_books_
-    </div>
-    </div>
+    <center><img src="img/book.png" width="40" height="40" alt="phone Icon">
+        <label class="cont">Contact Us</label>
+        <div>
+            <div class="col">
+                <img src="img/phone.png" width="40" height="40" alt="phone Icon">
+                phone number: 2810234417
+            </div>
+            <div class="col">
+                <img src="img/gmail.png" width="40" height="40" alt="Gmail Icon">
+                email: books@gmail.com
+            </div>
+            <div class="col">
+                <img src="img/insta.png" width="40" height="40" alt="insta Icon">
+                insta: @_books_
+            </div>
+        </div>
+    </center>
 </footer>
 
 <script>
