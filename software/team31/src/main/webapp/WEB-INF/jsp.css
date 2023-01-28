@@ -81,25 +81,24 @@
     opacity: 0.9;
     color: white;
     border-radius: 8px;
-    background-color: #6f15c7; color: white;
+    background-color: #6f15c7;
     margin: 5px;
     transition: 0.3s;
   }
 
   .buttonlog {
+    padding: 8px 20px;
     margin-left: 75%;
     border: none;
     cursor: pointer;
     width: 10%;
     opacity: 0.9;
-    color: white;
+    color: black;
     border-radius: 8px;
-    background-color: #f1f1f1; color: black;
+    background-color: #f1f1f1;
     margin: 5px;
     transition: 0.3s;
-    height: 1%;
   }
-
   .buttonlogreg:hover {opacity: 0.6}
 
   .buttonlog:hover {

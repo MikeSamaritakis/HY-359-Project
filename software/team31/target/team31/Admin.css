@@ -1,3 +1,10 @@
+#grad1 {
+    height: 2000px;
+    background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(orange, #EC6F66, white);
+    overflow: hidden;
+}
+
 .wt{
     font-family: "Courier New";
     color: white;
@@ -6,6 +13,31 @@
 .solid {
     border-top: 3px solid white;
     width: 70%;
+}
+
+footer {
+    margin-top: 29%;
+    background-image: linear-gradient(transparent, #5D3891);
+    width: 100%;
+    opacity: 0.6;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Courier New";
+    color: black;
+    font-size: x-large;
+}
+
+.cont {
+    color: black;
+    font-family: "Courier New";
+    font-size: xx-large;
+    border-radius: 8px;
+}
+
+.col {
+    display: inline-flex;
+    padding: 3%;
+    font-family: "Courier New";
 }
 
 .custom-select {
@@ -65,12 +97,6 @@
 
 .select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.04);
-}
-
-#grad1 {
-    height: 1000px;
-    background-color: white; /* For browsers that do not support gradients */
-    background-image: linear-gradient(orange, #EC6F66, white);
 }
 
 table {
