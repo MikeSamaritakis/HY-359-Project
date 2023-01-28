@@ -38,76 +38,22 @@ import java.sql.*;
 public class AdminGuest extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
-    public AdminGuest(){
-        super();
-    }
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     //adminlogin
     //use the dispatcher to redirect to welcome page if login is successful
-        PrintWriter writer = response.getWriter();
-
-        String username = request.getParameter("loginadminusername");
-        String password = request.getParameter("loginadminpassword");
-
-//        writer.println(username);
-//        writer.println(password);
-
-        if (username == "admin" && password == "admin12*"){
-
-        }
-        else{
-            // The code does not enter the if statement, meaning that the credentials check for admin are not done.
-            // To showcase functionality we skipped the if statement and assumed the credentials entered are always correct.
 
 
-            // The code below is the correct version of the else statement, assuming the if statement functioned as intended.
-//            PrintWriter out = response.getWriter();
-//            out.println("<html><body>Wrong Admin Credentials, try again by going to <a href=\"http://localhost:8080/team31_war_exploded/\">the previous page!</a></body></html>");
-        }
+   response.sendRedirect("Admin.html");
 
-        try {
-            DB_Connection.getConnection();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+//πατερας σου
 
-        String query = "select username from students";
-        Statement stmt = null;
 
-        try {
-            stmt = DB_Connection.getConnection().createStatement();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
 
-        ResultSet rs;
 
-        try {
-            rs = stmt.executeQuery(query);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
 
-        try {
-            int n = 1;
-            rs.first();
-            while (n<5){
-                rs.next();
-                System.out.println(rs.getString(n-1));
-                n++;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-        writer.close();
-        writer.flush();
     }
 
     @Override
