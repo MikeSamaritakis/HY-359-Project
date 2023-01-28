@@ -66,7 +66,7 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>EditInfo</servlet-name>
-    <url-pattern>/EditInfo/*</url-pattern>
+    <url-pattern>/Edit/*</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>LibrarianAddBook</servlet-name>
