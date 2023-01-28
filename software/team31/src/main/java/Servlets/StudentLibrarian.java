@@ -100,6 +100,7 @@ String page = "";
            page="index.jsp";
            RequestDispatcher dd =request.getRequestDispatcher(page);
            dd.forward(request,response);
+           //πατερας σου
         }
 
 
