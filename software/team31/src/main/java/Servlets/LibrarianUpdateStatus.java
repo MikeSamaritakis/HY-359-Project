@@ -26,6 +26,8 @@ public class LibrarianUpdateStatus extends HttpServlet {
         Borrowing b = new Borrowing();
         EditBorrowingTable eb = new EditBorrowingTable();
 
+        String newStatus = request.getParameter("newstatus");
+
 
     }
 

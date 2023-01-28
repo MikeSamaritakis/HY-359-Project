@@ -20,10 +20,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import mainClasses.Book;
-import mainClasses.Librarian;
-import mainClasses.Review;
-import mainClasses.Student;
+
+import mainClasses.*;
 
 /*
  *
@@ -72,6 +70,8 @@ public class InitDatabase {
         EditAdminMessageTable eam = new EditAdminMessageTable();
         eam.createAdminMessageTable();
 
+        CreateAdmin admin = new CreateAdmin();
+        admin.createAdminTable();
     }
 
     public void addToDatabaseExamples() throws ClassNotFoundException, SQLException {
