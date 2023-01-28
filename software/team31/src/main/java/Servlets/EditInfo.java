@@ -45,6 +45,9 @@ public class EditInfo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //  Edit info for Students
+
+
+
         String username = request.getParameter("editusername");
         String password = request.getParameter("editpassword");
         String email = request.getParameter("editemail");
@@ -60,17 +63,10 @@ public class EditInfo extends HttpServlet {
             throw new RuntimeException(e);
         }
 
-        String usernameog = stu.getUsername();
+        String usernameog = username;
 
-        if (username != null){
-            try {
-                EditStudentsTable.updateStudentusername(usernameog, username);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (password != null) {
+
+        if (password != null) {
             try {
                 EditStudentsTable.updateStudentusername(usernameog, password);
             } catch (SQLException e) {
