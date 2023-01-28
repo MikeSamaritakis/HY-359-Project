@@ -58,7 +58,7 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AdminViewUser</servlet-name>
-    <url-pattern>/AdminOverview/*</url-pattern>
+    <url-pattern>/AdminViewUser/*</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>StudentBorrowBook</servlet-name>

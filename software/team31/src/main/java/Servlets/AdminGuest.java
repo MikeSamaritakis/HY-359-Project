@@ -11,24 +11,9 @@ import java.io.PrintWriter;
 import java.util.logging.Level;
 
 import database.DB_Connection;
-import database.tables.EditStudentsTable;
-import database.tables.EditBooksInLibraryTable;
-import database.tables.EditBooksTable;
-import database.tables.EditAdminMessageTable;
-import database.tables.EditBorrowingTable;
-import database.tables.EditLibrarianTable;
-import database.tables.EditReviewsTable;
-import database.tables.GeneralQueries;
+import database.tables.*;
 
-import mainClasses.AdminMessage;
-import mainClasses.Book;
-import mainClasses.BookInLibrary;
-import mainClasses.Borrowing;
-import mainClasses.JSON_Converter;
-import mainClasses.Librarian;
-import mainClasses.Review;
-import mainClasses.Student;
-import mainClasses.User;
+import mainClasses.*;
 
 import java.util.logging.*;
 import com.google.gson.JsonObject;
@@ -45,10 +30,34 @@ public class AdminGuest extends HttpServlet {
     //adminlogin
     //use the dispatcher to redirect to welcome page if login is successful
 
+        String username = request.getParameter("loginadminusername");
+        String password = request.getParameter("loginadminpassword");
+        Admin p = new Admin();
+        String page="";
+        try {
+            p = EditAdminsTable.databaseToAdmin(username, password);
+        } catch (SQLException e) {
+            page = "index.jsp";
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        if (p == null){
+            page="index.jsp";
+            RequestDispatcher dd =request.getRequestDispatcher(page);
+            dd.forward(request,response);
 
+        }
+
+        if (p == null){
+            page="index.jsp";
+            RequestDispatcher dd =request.getRequestDispatcher(page);
+            dd.forward(request,response);
+
+        }
    response.sendRedirect("Admin.html");
 
-//πατερας σου
+
 
 
 
