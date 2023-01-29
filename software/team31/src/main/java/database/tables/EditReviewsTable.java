@@ -93,7 +93,7 @@ public class EditReviewsTable {
         Statement stmt = con.createStatement();
         String sql = "CREATE TABLE reviews "
                 + "(review_id INTEGER not NULL AUTO_INCREMENT, "
-                + "user_id INTEGER not null,"
+                + "user_id INTEGER AUTO_INCREMENT,"
                 + "isbn VARCHAR(13) not NULL, "
                 + "reviewText VARCHAR(2000) not null,"
                 + "reviewScore INTEGER not null,"

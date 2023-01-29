@@ -1,14 +1,9 @@
 #grad1 {
-    height: 1000px;
+    height: 2000px;
     background-color: white; /* For browsers that do not support gradients */
     background-image: linear-gradient(orange, #EC6F66, white);
-}
-
-.vertical {
-    border-left: 4px solid black;
-    height: 800px;
-    position:absolute;
-    left: 15%;
+    overflow: hidden;
+    block-size: content-box;
 }
 
 .solid {
@@ -19,4 +14,61 @@
 .wt{
     font-family: "Courier New";
     color: white;
+}
+
+footer {
+    margin-top: 25%;
+    background-image: linear-gradient(transparent, #5D3891);
+    width: 100%;
+    opacity: 0.6;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Courier New";
+    color: black;
+    font-size: x-large;
+}
+
+.cont {
+    color: black;
+    font-family: "Courier New";
+    font-size: xx-large;
+    border-radius: 8px;
+}
+
+.col {
+    display: inline-flex;
+    padding: 3%;
+    font-family: "Courier New";
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    width: 250px;
+    height: 60px;
+    border:none;
+    color:orange;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 10px;
+    background-color:white;
+    opacity: 0.8;
+    cursor:pointer;
+    font-family: "Courier New";
+    font-size: large;
+}
+
+.btn:hover {opacity: 0.7;}
+
+.pos {
+    margin-top: 7%;
+}
+
+.img {
+    opacity: 0.9;
 }

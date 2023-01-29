@@ -16,6 +16,10 @@ public class StudentReviewBook extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Student submits review if he has already completed one borrowing of the book.
+        String isbn = request.getParameter("reviewisbn");
+        String score = request.getParameter("reviewscore");
+        String review  = request.getParameter("reviewbox");
+
 
     }
 

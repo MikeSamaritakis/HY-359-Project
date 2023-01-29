@@ -6,13 +6,6 @@
     block-size: content-box;
 }
 
-.vertical {
-    border-left: 4px solid black;
-    height: 800px;
-    position:absolute;
-    left: 15%;
-}
-
 .solid {
     border-top: 3px solid white;
     width: 70%;
