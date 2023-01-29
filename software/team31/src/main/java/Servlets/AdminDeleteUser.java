@@ -13,14 +13,14 @@ import java.io.IOException;
 public class AdminDeleteUser extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
-    public AdminDeleteUser(){
-        super();
-    }
+//    public AdminDeleteUser(){
+//        super();
+//    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("UsernAMEAPOHTML");
-        String type = request.getParameter("TYPOSAPOHtmL");
+        String username = request.getParameter("userToBeDeleted");
+        String type = request.getParameter("");
 
         if (type == "1"){
             EditLibrarianTable lib = new EditLibrarianTable();
@@ -40,7 +40,7 @@ public class AdminDeleteUser extends HttpServlet {
         }
         else if (type == "0"){
             System.out.println("No user type selected.");
-            System.err.println("Error occured, not type selected by admin.");
+            System.err.println("Error occurred, not type selected by admin.");
         }
     }
 

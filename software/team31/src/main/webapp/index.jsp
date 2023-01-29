@@ -3,8 +3,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <meta charset="ISO-8859-1">
-        <style><%@include file="/WEB-INF/jsp.css"%></style>
-        <script><%@include file="/WEB-INF/jsp.js"%></script>
+        <style><%@include file="/WEB-INF/index.css"%></style>
+        <script><%@include file="/WEB-INF/index.js"%></script>
 
     </head>
 
