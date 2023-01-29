@@ -201,7 +201,7 @@ public class EditStudentsTable {
         }
     }
 
-    public void deleteStudent(String username) throws ClassNotFoundException{
+    public static void deleteStudent(String username) throws ClassNotFoundException{
         try {
             Connection con = DB_Connection.getConnection();
 

@@ -26,17 +26,15 @@ public class AdminDeleteUser extends HttpServlet {
         out.println(type);
         out.println(username);
         if (type == "1"){
-            EditLibrarianTable lib = new EditLibrarianTable();
             try {
-                lib.deleteLibrarian(username);
+                EditLibrarianTable.deleteLibrarian(username);
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
         }
         else if (type == "2"){
-            EditStudentsTable stu = new EditStudentsTable();
             try {
-                stu.deleteStudent(username);
+                EditStudentsTable.deleteStudent(username);
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }

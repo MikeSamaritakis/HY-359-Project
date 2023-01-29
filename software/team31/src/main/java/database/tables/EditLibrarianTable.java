@@ -184,13 +184,13 @@ public class EditLibrarianTable {
         }
     }
 
-    public void deleteLibrarian(String username) throws ClassNotFoundException{
+    public static void deleteLibrarian(String username2) throws ClassNotFoundException{
         try {
             Connection con = DB_Connection.getConnection();
 
             Statement stmt = con.createStatement();
 
-            String insertQuery = "DELETE FROM librarians WHERE username = '" + username + "'";
+            String insertQuery = "DELETE FROM librarians WHERE username = '" + username2 + "'";
             //stmt.execute(table);
             System.out.println(insertQuery);
             stmt.executeUpdate(insertQuery);
