@@ -23,7 +23,7 @@
 }
 
 footer {
-    margin-top: 34%;
+    margin-top: 21%;
     background-image: linear-gradient(transparent, #5D3891);
     width: 100%;
     opacity: 0.6;
@@ -50,8 +50,7 @@ footer {
 .custom-select {
     position: relative;
     font-family: Arial;
-    margin-left: 130%;
-    margin-top: 15.5%;
+
 }
 
 .custom-select select {
@@ -112,7 +111,6 @@ footer {
     background-color: rgba(0, 0, 0, 0.04);
     border-radius: 100px;
 }
-
 
 *{
     padding: 0;
@@ -256,6 +254,17 @@ footer {
 .positionall {
     position: absolute;
     margin-left: 25%;
-    margin-top: 5%;
-
+    margin-top: 1%;
 }
+
+.positionall2 {
+    margin-right: 10%;
+}
+
+.positionall3 {
+    margin-right: 5%;
+    margin-bottom: 100%;
+}
+
+
+
