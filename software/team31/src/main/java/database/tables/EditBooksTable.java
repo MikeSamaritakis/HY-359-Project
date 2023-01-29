@@ -97,12 +97,14 @@ public class EditBooksTable {
             String json=DB_Connection.getResultsToJSON(rs);
             Gson gson = new Gson();
             Book user = gson.fromJson(json, Book.class);
+            stmt.close();
             return user;
         } catch (Exception e) {
             System.out.println("Got an exception! ");
             System.err.println(e.getMessage());
             System.out.println("WRONG ISBN!");
         }
+        stmt.close();
         return null;
     }
 
