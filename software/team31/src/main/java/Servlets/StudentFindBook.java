@@ -47,13 +47,13 @@ public class StudentFindBook extends HttpServlet {
         String isbn = request.getParameter("txt");
         Book grepolis = new Book();
         try {
-            grepolis = EditBooksTable.databaseToBooksbyISBN(isbn);
+            grepolis = EditBooksTable.databaseToBook(isbn);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        String grepolisTitle = grepolis.getIsbn();
+        String grepolisTitle = grepolis.getTitle();
         out.print(grepolisTitle);
 
 
