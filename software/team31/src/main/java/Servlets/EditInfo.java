@@ -46,59 +46,49 @@ public class EditInfo extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //  Edit info for Students
 
-
-
         String username = request.getParameter("editusername");
         String password = request.getParameter("editpassword");
         String email = request.getParameter("editemail");
         String firstname = request.getParameter("editfirstname");
         String lastname = request.getParameter("editlastname");
 
-        Student stu = new Student();
-        try {
-            stu = EditStudentsTable.databaseToStudent(username, password);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
-        String usernameog = username;
-
-
-        if (password != null) {
+        if (password != "") {
             try {
-                EditStudentsTable.updateStudentusername(usernameog, password);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (email != null) {
-            try {
-                EditStudentsTable.updateStudentusername(usernameog, email);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (firstname != null) {
-            try {
-                EditStudentsTable.updateStudentusername(usernameog, firstname);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (lastname != null) {
-            try {
-                EditStudentsTable.updateStudentusername(usernameog, lastname);
+                EditStudentsTable.updateStudentpassword(username, password);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
         }
+        if (email != "") {
+            try {
+                EditStudentsTable.updateStudentemail(username, email);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (firstname != "") {
+            try {
+                EditStudentsTable.updateStudentfirstname(username, firstname);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        if (lastname != "") {
+            try {
+                EditStudentsTable.updateStudentlastname(username, lastname);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        response.sendRedirect("Student.html");
     }
 
     @Override
@@ -110,57 +100,42 @@ public class EditInfo extends HttpServlet {
         String firstname = request.getParameter("editfirstnamel");
         String lastname = request.getParameter("editlastnamel");
 
-        Librarian lib = new Librarian();
-        try {
-            lib = EditLibrarianTable.databaseToLibrarian(username, password);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
-        String usernameog = lib.getUsername();
-
-        if (username != null){
+       if (password != "") {
             try {
-                EditStudentsTable.updateStudentusername(usernameog, username);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (password != null) {
-            try {
-                EditStudentsTable.updateStudentusername(usernameog, password);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (email != null) {
-            try {
-                EditStudentsTable.updateStudentusername(usernameog, email);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (firstname != null) {
-            try {
-                EditStudentsTable.updateStudentusername(usernameog, firstname);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (lastname != null) {
-            try {
-                EditStudentsTable.updateStudentusername(usernameog, lastname);
+                EditLibrarianTable.updateLibrarianpassword(username, password);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             } catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
         }
+       if (email != "") {
+            try {
+                EditLibrarianTable.updateLibrarianemail(username, email);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+       if (firstname != "") {
+            try {
+                EditLibrarianTable.updateLibrarianfirstname(username, firstname);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+       if (lastname != "") {
+            try {
+                EditLibrarianTable.updateLibrarianlastname(username, lastname);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        response.sendRedirect("Librarian.html");
     }
 }
