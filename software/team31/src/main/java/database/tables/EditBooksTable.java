@@ -99,10 +99,13 @@ public class EditBooksTable {
             Book user = gson.fromJson(json, Book.class);
             stmt.close();
             return user;
+
+
         } catch (Exception e) {
             System.out.println("Got an exception! ");
             System.err.println(e.getMessage());
             System.out.println("WRONG ISBN!");
+            stmt.close();
         }
         stmt.close();
         return null;
