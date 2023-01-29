@@ -8,20 +8,23 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet()
 public class AdminDeleteUser extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
-//    public AdminDeleteUser(){
-//        super();
-//    }
+   public AdminDeleteUser(){
+       super();
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("userToBeDeleted");
         String type = request.getParameter("TypeDelete");
-
+        PrintWriter out = response.getWriter();
+        out.println(type);
+        out.println(username);
         if (type == "1"){
             EditLibrarianTable lib = new EditLibrarianTable();
             try {
