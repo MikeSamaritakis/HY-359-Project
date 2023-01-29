@@ -1,7 +1,7 @@
 #grad1 {
     height: 2000px;
     background-color: white; /* For browsers that do not support gradients */
-    background-image: linear-gradient(orange, #EC6F66, white);
+    background-image: linear-gradient(mediumpurple, cornflowerblue, white);
     overflow: hidden;
     block-size: content-box;
 }
@@ -17,8 +17,8 @@
 }
 
 footer {
-    margin-top: 25%;
-    background-image: linear-gradient(transparent, #5D3891);
+    margin-top: 11%;
+    background-image: linear-gradient(transparent, white);
     width: 100%;
     opacity: 0.6;
     border-radius: 8px;
@@ -56,7 +56,7 @@ footer {
     font-family: "Courier New";
     font-size: medium;
     padding: 0.5%;
-    box-shadow:0px 15px 30px rgba(0,0,0,0.1);
+    box-shadow:0px 15px 30px rgba(0,0,0,0.3);
     outline:none;
     block-size: 3%;
 }
@@ -65,16 +65,31 @@ footer {
     font-family: "Courier New";
     color: white;
     font-size: medium;
+    margin-left: 44.5%;
+    display: flex;
+}
+
+.txtedit2 {
+    font-family: "Courier New";
+    color: white;
+    font-size: medium;
+    margin-left: 41.7%;
+    display: flex;
 }
 
 .btn {
     height:33px;
     width:100px;
     border:none;
-    color:orange;
+    color:mediumpurple;
     border-radius:8px;
     background-color:white;
     opacity: 0.8;
     cursor:pointer;
     text-transform:uppercase;
+    box-shadow:0px 15px 30px rgba(0,0,0,0.2);
+}
+
+.pos {
+    margin-top: 5%;
 }
