@@ -85,7 +85,7 @@ public class EditBooksTable {
         return null;
     }
 
-    public ArrayList<Book> databaseToBooksbyISBN(String isbn) throws SQLException, ClassNotFoundException {
+    public static ArrayList<Book> databaseToBooksbyISBN(String isbn) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
         ArrayList<Book> books = new ArrayList<Book>();
