@@ -85,10 +85,9 @@ public class EditBooksTable {
         return null;
     }
 
-    public static ArrayList<Book> databaseToBooksbyISBN(String isbn) throws SQLException, ClassNotFoundException {
+    public static Book databaseToBooksbyISBN(String isbn) throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
-        ArrayList<Book> books = new ArrayList<Book>();
         ResultSet rs;
         try {
             rs = stmt.executeQuery("SELECT * FROM books WHERE isbn '" + isbn + "'");
@@ -97,9 +96,8 @@ public class EditBooksTable {
                 String json = DB_Connection.getResultsToJSON(rs);
                 Gson gson = new Gson();
                 Book book = gson.fromJson(json, Book.class);
-                books.add(book);
+                return book;
             }
-            return books;
         } catch (Exception e) {
             System.err.println("Got an exception! ");
             System.err.println(e.getMessage());

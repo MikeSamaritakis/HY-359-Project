@@ -51,6 +51,10 @@
     <servlet-name>AdminDeleteUser</servlet-name>
     <servlet-class>Servlets.AdminDeleteUser</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>StudentFindBook</servlet-name>
+    <servlet-class>Servlets.StudentFindBook</servlet-class>
+  </servlet>
 <!--Here you enter the servlet name and the corresponding URL.-->
   <servlet-mapping>
     <servlet-name>AdminDeleteUser</servlet-name>
@@ -96,6 +100,10 @@
   <servlet-mapping>
     <servlet-name>AdminGuest</servlet-name>
     <url-pattern>/AdminGuest/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentFindBook</servlet-name>
+    <url-pattern>/StudentFindBook/*</url-pattern>
   </servlet-mapping>
   
   

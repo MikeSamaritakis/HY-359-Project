@@ -44,65 +44,10 @@ public class StudentFindBook extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
 
-
-        //            DB_Connection.getConnection();
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//
-//        String  isbn = "";
-//        String query = "SELECT isbn FROM books WHERE name='" + isbn + "'";
-//
-//        Statement stmt = null;
-//        try {
-//            stmt = DB_Connection.getConnection().createStatement();
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        } catch (ClassNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//        try {
-//            stmt.executeUpdate(query);
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-//        ResultSet rs;
-//
-//        try {
-//            rs = stmt.executeQuery(query);
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-//        try
-//        {
-//
-//
-//            rs = stmt.executeQuery(query);
-//
-//
-//            while (rs.next())
-//            {
-//
-//                String nm = rs.getString("isbn");
-//
-//
-//            }
-//
-//
-//        }
-//        catch (Exception e)
-//        {
-//            out.println("error");
-//        }
-//
-
-      String isbn = "";
-      Book grepolis = new Book();
+        String isbn = "";
+        Book grepolis = new Book();
         try {
-            EditBooksTable.databaseToBooksbyISBN(isbn);
+            grepolis = EditBooksTable.databaseToBooksbyISBN(isbn);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
@@ -110,6 +55,8 @@ public class StudentFindBook extends HttpServlet {
         }
         String grepolisTitle = grepolis.getTitle();
         out.print(grepolisTitle);
+
+
 
     }
 
