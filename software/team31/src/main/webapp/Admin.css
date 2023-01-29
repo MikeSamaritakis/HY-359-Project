@@ -49,7 +49,7 @@ footer {
 .custom-select {
     position: relative;
     font-family: Arial;
-    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+
 }
 
 .custom-select select {
@@ -82,7 +82,7 @@ footer {
     color: 	#E66355;
     padding: 8px 16px;
     border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    border-color: transparent transparent transparent;
     cursor: pointer;
     user-select: none;
 }
@@ -163,8 +163,8 @@ td {
 }
 
 .editinpt {
-    width: 238px;
-    height: 38px;
+    width: 200px;
+    height: 36px;
     border:none;
     color: black;
     background-color:white;
@@ -175,6 +175,7 @@ td {
     font-size: large;
     margin-bottom: 30%;
     box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+    outline: none;
 }
 
 .editinpt:hover {opacity: 0.7;}
