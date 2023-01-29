@@ -20,7 +20,7 @@ public class LibrarianAddBook extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        Librarian can add a book to the library.
         Book book = new Book();
-        String page = "";
+       String page="";
         String isbn = request.getParameter("newisbn");
         book.setIsbn(isbn);
         String title = request.getParameter("newtitle");
@@ -35,21 +35,18 @@ public class LibrarianAddBook extends HttpServlet {
         book.setPhoto(photo);
         String pages = request.getParameter("newpages");
         book.setPages(Integer.parseInt(pages));
-        String publicationyear = request.getParameter("newpublicationyear");
-        book.setPublicationyear(Integer.parseInt(publicationyear));
+        String publicationyear2 = request.getParameter("newpublicationyear");
+        book.setPublicationyear(Integer.parseInt(publicationyear2));
 
         try {
             EditBooksTable.createNewBook(book);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        page = "Librarian.html";
-        RequestDispatcher dd =request.getRequestDispatcher(page);
-        dd.forward(request,response);
+        response.sendRedirect("Librarian.html");
     }
-
-    @Override
+    @Override()
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    }
-}
+    }}
+
