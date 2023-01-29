@@ -1,5 +1,5 @@
 #grad1 {
-    height: 1500px;
+    height: 2000px;
     background-color: white; /* For browsers that do not support gradients */
     background-image: linear-gradient(orange, #EC6F66, white);
     overflow: hidden;
@@ -24,7 +24,7 @@
 }
 
 footer {
-    margin-top: 35%;
+    margin-top: 34%;
     background-image: linear-gradient(transparent, #5D3891);
     width: 100%;
     opacity: 0.6;
