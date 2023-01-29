@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import mainClasses.Librarian;
+import mainClasses.Student;
 
 /**
  *
@@ -85,22 +86,22 @@ public class EditBooksTable {
         return null;
     }
 
-    public static Book databaseToBooksbyISBN(String isbn) throws SQLException, ClassNotFoundException {
+    public static Book databaseToBook(String isbn1) throws SQLException, ClassNotFoundException{
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
+
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * FROM books WHERE isbn '" + isbn + "'");
-
-            while (rs.next()) {
-                String json = DB_Connection.getResultsToJSON(rs);
-                Gson gson = new Gson();
-                Book book = gson.fromJson(json, Book.class);
-                return book;
-            }
+            rs = stmt.executeQuery("SELECT * FROM books WHERE isbn = '" + isbn1 + "'");
+            rs.next();
+            String json=DB_Connection.getResultsToJSON(rs);
+            Gson gson = new Gson();
+            Book user = gson.fromJson(json, Book.class);
+            return user;
         } catch (Exception e) {
-            System.err.println("Got an exception! ");
+            System.out.println("Got an exception! ");
             System.err.println(e.getMessage());
+            System.out.println("WRONG ISBN!");
         }
         return null;
     }

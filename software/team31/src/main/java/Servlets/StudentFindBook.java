@@ -44,10 +44,10 @@ public class StudentFindBook extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
 
-        String isbn = "";
+        String isbn = request.getParameter("txt");
         Book grepolis = new Book();
         try {
-            grepolis = EditBooksTable.databaseToBooksbyISBN(isbn);
+            grepolis = EditBooksTable.databaseToBook(isbn);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
