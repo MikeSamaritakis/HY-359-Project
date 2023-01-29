@@ -15,9 +15,7 @@ import java.sql.Statement;
 public class AdminViewUser extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
-    public AdminViewUser(){
-        super();
-    }
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -53,7 +51,8 @@ public class AdminViewUser extends HttpServlet {
         {
 
 
-            rs = stmt.executeQuery("select * from students");
+            rs = stmt.executeQuery(query);
+
             out.println("<table border=1 width=50% height=50%>");
  out.println("Students \n");
             while (rs.next())
@@ -64,7 +63,7 @@ public class AdminViewUser extends HttpServlet {
                 out.println("<tr><td>" + n  + "</td></tr>");
             }
             out.println("</table>");
-            out.println("</html></body>");
+
 
         }
         catch (Exception e)
@@ -86,7 +85,7 @@ public class AdminViewUser extends HttpServlet {
         ResultSet rs2;
 
         try {
-            rs2 = stmt2.executeQuery(query);
+            rs2 = stmt2.executeQuery(query2);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -94,15 +93,15 @@ public class AdminViewUser extends HttpServlet {
         {
 
 
-            rs2 = stmt2.executeQuery("select * from librarians");
+            rs2 = stmt2.executeQuery(query2);
             out.println("<table border=1 width=50% height=50%>");
             out.println("Librarians \n");
             while (rs2.next())
             {
 
-                String n = rs2.getString("username");
+                String n1 = rs2.getString("username");
 
-                out.println("<tr><td>" + n  + "</td></tr>");
+                out.println("<tr><td>" + n1  + "</td></tr>");
             }
             out.println("</table>");
             out.println("</html></body>");

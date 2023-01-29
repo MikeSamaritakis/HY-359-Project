@@ -11,7 +11,7 @@
 
 <center><div class="solid"></div></center>
 
-<form id="ViewUsers" method="get" action="AdminOverview">
+<form id="ViewUsers" method="get" action="AdminOverview/">
 <center style="padding-top: 3%;">
   <div class="align">
   <div class="custom-select" style="width:200px;">
@@ -24,8 +24,18 @@
   <button class="subbtn" type="submit" value="call Servlet" style="display: block;" ><img src="img/search.png" height="70%" width="90%" ></button>
   </div>
 </center>
+
 </form>
 
+<form id="DeleteUser" action="AdminDelete/" method="get">
+  <input type="text" name="userToBeDeleted">
+  <select>
+    <option value="0">Select User Type:</option>
+    <option value="1">Librarian</option>
+    <option value="2">Student</option>
+  </select>
+  <button type="submit" value="call Servlet">Delete</button>
+</form>
 
 <center style="padding-top: 1%;">
 <div class="students" >
