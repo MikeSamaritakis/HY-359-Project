@@ -1,5 +1,6 @@
 package Servlets;
 
+import database.DB_Connection;
 import database.tables.EditBooksInLibraryTable;
 import database.tables.EditBorrowingTable;
 import mainClasses.BookInLibrary;
@@ -9,6 +10,9 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 @WebServlet()
 public class LibrarianUpdateStatus extends HttpServlet {
@@ -27,6 +31,73 @@ public class LibrarianUpdateStatus extends HttpServlet {
         EditBorrowingTable eb = new EditBorrowingTable();
 
         String newStatus = request.getParameter("newstatus");
+
+        if (newStatus == "available") {
+            Connection con = null;
+            try {
+                con = DB_Connection.getConnection();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+            Statement stmt = null;
+            try {
+                stmt = con.createStatement();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            String updateQuery = "UPDATE borrowing SET status = 'successEnd'";
+
+            try {
+                stmt.executeUpdate(updateQuery);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                stmt.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                con.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        else if (newStatus == "unavailable"){
+            Connection con = null;
+            try {
+                con = DB_Connection.getConnection();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+            Statement stmt = null;
+            try {
+                stmt = con.createStatement();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            String updateQuery = "UPDATE borrowing SET status = 'borrowed'";
+
+            try {
+                stmt.executeUpdate(updateQuery);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                stmt.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                con.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
 
 
