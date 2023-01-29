@@ -1,0 +1,80 @@
+#grad1 {
+    height: 2000px;
+    background-color: white; /* For browsers that do not support gradients */
+    background-image: linear-gradient(orange, #EC6F66, white);
+    overflow: hidden;
+    block-size: content-box;
+}
+
+.solid {
+    border-top: 3px solid white;
+    width: 70%;
+}
+
+.wt{
+    font-family: "Courier New";
+    color: white;
+}
+
+footer {
+    margin-top: 25%;
+    background-image: linear-gradient(transparent, #5D3891);
+    width: 100%;
+    opacity: 0.6;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Courier New";
+    color: black;
+    font-size: x-large;
+}
+
+.cont {
+    color: black;
+    font-family: "Courier New";
+    font-size: xx-large;
+    border-radius: 8px;
+}
+
+.col {
+    display: inline-flex;
+    padding: 3%;
+    font-family: "Courier New";
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.edit {
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 8px;
+    border: none;
+    color: black;
+    font-family: "Courier New";
+    font-size: medium;
+    padding: 0.5%;
+    box-shadow:0px 15px 30px rgba(0,0,0,0.1);
+    outline:none;
+    block-size: 3%;
+}
+
+.txtedit {
+    font-family: "Courier New";
+    color: white;
+    font-size: medium;
+}
+
+.btn {
+    height:33px;
+    width:100px;
+    border:none;
+    color:orange;
+    border-radius:8px;
+    background-color:white;
+    opacity: 0.8;
+    cursor:pointer;
+    text-transform:uppercase;
+}

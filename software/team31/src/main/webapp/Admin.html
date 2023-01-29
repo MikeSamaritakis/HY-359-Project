@@ -7,73 +7,82 @@
   <link rel="stylesheet" href="Admin.css">
 </head>
 <body id="grad1">
-<center><h1 class="wt"> Welcome Admin! </h1> </center>
 
-<center><div class="solid"></div></center>
-
+<div class="positionall">
 <form id="ViewUsers" method="get" action="AdminOverview/">
 <center style="padding-top: 3%;">
   <div class="align">
   <div class="custom-select" style="width:200px;">
   <select>
-    <option value="0">Select User Type:</option>
+    <option value="0">View User Type:</option>
     <option value="1">Librarian</option>
     <option value="2">Student</option>
   </select>
 </div>
-  <button class="subbtn" type="submit" value="call Servlet" style="display: block;" ><img src="img/search.png" height="70%" width="90%" ></button>
+    <button class="subbtn" type="submit" value="call Servlet">
+    <img src="img/search.png" height="60%" width="60%" ></button>
   </div>
 </center>
-
 </form>
+</div>
 
+<br>
+<center><h1 class="wt"> Welcome Admin! </h1> </center><br>
+
+<center><div class="solid"></div></center><br>
+<br>
+
+<div class="positionall">
 <form id="DeleteUser" action="AdminDelete/" method="get">
-  <input type="text" name="userToBeDeleted">
-  <select name="TypeDelete" id="TypeDelete">
-    <option value="0">Select User Type:</option>
-    <option value="1">Librarian</option>
-    <option value="2">Student</option>
-  </select>
-  <button type="submit" value="call Servlet">Delete</button>
+  <center style="padding-top: 3%;">
+  <input type="text" name="userToBeDeleted" class="editinpt" placeholder="Delete User by name">
+    <div class="align">
+    <div class="custom-select" style="width:200px;">
+    <select name="TypeDelete" id="TypeDelete">
+      <option value="0">Delete User Type:</option>
+      <option value="1">Librarian</option>
+      <option value="2">Student</option>
+    </select>
+    </div>
+      <button class="subbtn" type="submit" value="call Servlet">
+      <img src="img/bin.png" height="60%" width="60%" ></button>
+    </div>
+  </center>
 </form>
-
-<center style="padding-top: 1%;">
-<div class="students" >
-  <section>
-    <h2 class="wt">Students</h2>
-    <!-- TABLE CONSTRUCTION -->
-    <table>
-      <tr>
-      <tr><th>ID</th>
-        <th>Username</th>
-        <th>Name</th>
-        <th>Surname</th>
-      </tr>
-
-      </tr>
-
-
-    </table>
-  </section>
 </div>
-</center>
 
-<center style="padding-top: 1%;">
-<div class="librarians" style="display: none">
-  <section>
-    <h2 class="wt">Librarians</h2>
-    <!-- TABLE CONSTRUCTION -->
-    <table>
-      <tr>
-      <tr><th>S.N</th>
-        <th>UserName</th>
-        <th>Name</th>
-        <th>LastName</th>
-      </tr>
-    </table>
-  </section>
-</div>
-</center>
+<!--<center style="padding-top: 1%;">-->
+<!--<div class="students" >-->
+<!--  <section>-->
+<!--    <h2 class="wt">Students</h2>-->
+<!--    <table>-->
+<!--      <tr>-->
+<!--      <tr><th>ID</th>-->
+<!--        <th>Username</th>-->
+<!--        <th>Name</th>-->
+<!--        <th>Surname</th>-->
+<!--      </tr>-->
+<!--      </tr>-->
+<!--    </table>-->
+<!--  </section>-->
+<!--</div>-->
+<!--</center>-->
+
+<!--<center style="padding-top: 1%;">-->
+<!--<div class="librarians" style="display: none">-->
+<!--  <section>-->
+<!--    <h2 class="wt">Librarians</h2>-->
+<!--    <table>-->
+<!--      <tr>-->
+<!--      <tr><th>S.N</th>-->
+<!--        <th>UserName</th>-->
+<!--        <th>Name</th>-->
+<!--        <th>LastName</th>-->
+<!--      </tr>-->
+<!--    </table>-->
+<!--  </section>-->
+<!--</div>-->
+<!--</center>-->
 
 <footer>
   <center><img src="img/book.png" width="40" height="40" alt="phone Icon">
