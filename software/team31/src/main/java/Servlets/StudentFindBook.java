@@ -54,7 +54,7 @@ public class StudentFindBook extends HttpServlet {
             throw new RuntimeException(e);
         }
         if (grepolis != null){
-            response.sendRedirect("Student2.html");
+            response.sendRedirect("/team31_war_exploded/Student2.html");
         }
 
 

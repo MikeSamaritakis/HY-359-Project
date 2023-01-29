@@ -3,6 +3,7 @@ package Servlets;
 import com.google.gson.Gson;
 import database.DB_Connection;
 import database.tables.EditReviewsTable;
+import database.tables.EditStudentsTable;
 import mainClasses.Review;
 import mainClasses.Student;
 
@@ -31,51 +32,32 @@ public class StudentReviewBook extends HttpServlet {
         String review = request.getParameter("reviewbox");
         String username = request.getParameter("reviewusername");
 
-        Connection con = null;
+        Student p = new Student();
         try {
-            con = DB_Connection.getConnection();
+            p = EditStudentsTable.databaseToStudent2(username);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        Statement stmt = null;
+        username = p.getStudent_id();
+
+                EditReviewsTable editnewreview = new EditReviewsTable();
+                Review newreview = new Review();
+
+                newreview.setIsbn(isbn);
+                newreview.setReviewScore(score);
+                newreview.setReviewText(review);
+                int a= 1;
+                newreview.setUser_id(a);
+
         try {
-            stmt = con.createStatement();
-        } catch (SQLException e) {
+            editnewreview.createNewReview(newreview);
+        } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-
-        ResultSet rs;
-        try {
-            rs = stmt.executeQuery("SELECT * FROM students WHERE username = '" + username + "'");
-            rs.next();
-            String json = DB_Connection.getResultsToJSON(rs);
-            Gson gson = new Gson();
-            Student user = gson.fromJson(json, Student.class);
-            String user_id = user.getStudent_id();
-
-            EditReviewsTable editnewreview = new EditReviewsTable();
-            Review newreview = new Review();
-
-            newreview.setIsbn(isbn);
-            newreview.setReviewScore(score);
-            newreview.setReviewText(review);
-            newreview.setUser_id(Integer.parseInt(user_id));
-
-            if (review != "") {
-                try {
-                    editnewreview.createNewReview(newreview);
-                } catch (ClassNotFoundException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        } catch (Exception e) {
-            System.out.println("Username does not exist!");
-            System.err.println(e.getMessage());
-
-        }
     }
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

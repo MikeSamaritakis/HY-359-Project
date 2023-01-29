@@ -254,4 +254,24 @@ public class EditStudentsTable {
         String update = "UPDATE students SET lastname='" +  usernamenew + "' WHERE username = '" + usernameog + "'";
         stmt.executeUpdate(update);
     }
+    public static Student databaseToStudent2(String username) throws SQLException, ClassNotFoundException{
+        Connection con = DB_Connection.getConnection();
+        Statement stmt = con.createStatement();
+
+        ResultSet rs;
+        try {
+            rs = stmt.executeQuery("SELECT * FROM students WHERE username = '" + username + "'");
+            rs.next();
+            String json=DB_Connection.getResultsToJSON(rs);
+            Gson gson = new Gson();
+            Student user = gson.fromJson(json, Student.class);
+            return user;
+        } catch (Exception e) {
+            System.out.println("Got an exception! ");
+            System.err.println(e.getMessage());
+            System.out.println("WRONG CREDENTIALS!");
+        }
+        return null;
+    }
 }
+
