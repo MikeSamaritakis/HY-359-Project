@@ -190,7 +190,7 @@ public class EditLibrarianTable {
 
             Statement stmt = con.createStatement();
 
-            String insertQuery = "DELETE FROM librarians WHERE username = '" + username2 + "'";
+            String insertQuery = "DELETE FROM librarians WHERE USERNAME = '" + username2 + "'";
             //stmt.execute(table);
             System.out.println(insertQuery);
             stmt.executeUpdate(insertQuery);

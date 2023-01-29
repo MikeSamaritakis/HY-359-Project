@@ -207,7 +207,7 @@ public class EditStudentsTable {
 
             Statement stmt = con.createStatement();
 
-            String insertQuery = "DELETE FROM students WHERE username = '" + username1 + "'";
+            String insertQuery = "DELETE FROM students WHERE USERNAME = '" + username1 + "'";
             //stmt.execute(table);
             System.out.println(insertQuery);
             stmt.executeUpdate(insertQuery);
