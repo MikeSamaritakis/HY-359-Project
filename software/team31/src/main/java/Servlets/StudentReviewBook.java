@@ -56,6 +56,7 @@ public class StudentReviewBook extends HttpServlet {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+        response.sendRedirect("Student.html");
     }
 
 
