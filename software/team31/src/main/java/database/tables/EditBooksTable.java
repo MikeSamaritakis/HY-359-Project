@@ -99,7 +99,7 @@ public class EditBooksTable {
                 return book;
             }
         } catch (Exception e) {
-            System.err.println("Got an exception! ");
+            System.err.println("Got an exception!");
             System.err.println(e.getMessage());
         }
         return null;
