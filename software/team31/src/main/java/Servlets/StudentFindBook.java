@@ -44,7 +44,7 @@ public class StudentFindBook extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
 
-        String isbn = "";
+        String isbn = request.getParameter("txt");
         Book grepolis = new Book();
         try {
             grepolis = EditBooksTable.databaseToBooksbyISBN(isbn);
@@ -53,7 +53,7 @@ public class StudentFindBook extends HttpServlet {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        String grepolisTitle = grepolis.getTitle();
+        String grepolisTitle = grepolis.getIsbn();
         out.print(grepolisTitle);
 
 
