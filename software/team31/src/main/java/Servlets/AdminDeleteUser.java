@@ -20,7 +20,7 @@ public class AdminDeleteUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("userToBeDeleted");
-        String type = request.getParameter("");
+        String type = request.getParameter("TypeDelete");
 
         if (type == "1"){
             EditLibrarianTable lib = new EditLibrarianTable();
