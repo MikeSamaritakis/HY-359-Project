@@ -47,6 +47,74 @@ footer {
     font-family: "Courier New";
 }
 
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    margin-left: 130%;
+    margin-top: 15.5%;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 100px;
+    font-family: "Courier New";
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top:25px;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent transparent;
+    top: 7px;
+}
+
+.select-items div,.select-selected {
+    color: 	#E66355;
+    padding: 80px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+    font-family: "Courier New";
+    font-size: large;
+    border-radius: 100px;
+}
+
+.select-items {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    opacity: 0.7;
+    border-radius: 100px;
+    width: 100%;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 100px;
+}
+
+
 *{
     padding: 0;
     margin: 0;
