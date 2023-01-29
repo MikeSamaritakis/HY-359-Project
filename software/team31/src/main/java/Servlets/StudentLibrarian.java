@@ -52,26 +52,28 @@ public class StudentLibrarian extends HttpServlet {
 //        writer.println(password);
 //
         Student p = new Student();
-
+        String page = "";
         try {
             p = EditStudentsTable.databaseToStudent(username, password);
         } catch (SQLException e) {
-            response.sendRedirect("http://localhost:8080/team31_war_exploded/");
+            page = "index.jsp";
+            RequestDispatcher dd =request.getRequestDispatcher(page);
+            dd.forward(request,response);
             throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
         if (p == null){
-            response.sendRedirect("http://localhost:8080/team31_war_exploded/");
+            page = "index.jsp";
+            RequestDispatcher dd =request.getRequestDispatcher(page);
+            dd.forward(request,response);
         }
         // If the log-in fails then an exception is thrown meaning that the user will not see the
         // page created as a welcome user, thus he/she will not have access to any sensitive information.
-         //String updateemail = p.getEmail();
-         String updatefirstname = p.getFirstname();
-         String updatelastname =  p.getLastname();
-        RequestDispatcher rd= request.getRequestDispatcher("/Student.html");
-        rd.forward(request,response);
 
+        page="Student.html";
+        RequestDispatcher dd =request.getRequestDispatcher(page);
+        dd.forward(request,response);
     }
 
     @Override
@@ -86,7 +88,7 @@ public class StudentLibrarian extends HttpServlet {
 //        writer.println(password);
 //
         Librarian p = new Librarian();
-String page = "";
+        String page = "";
         try {
             p = EditLibrarianTable.databaseToLibrarian(username, password);
         } catch (SQLException e) {
@@ -100,7 +102,6 @@ String page = "";
            page="index.jsp";
            RequestDispatcher dd =request.getRequestDispatcher(page);
            dd.forward(request,response);
-           //πατερας σου
         }
 
 
