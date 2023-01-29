@@ -9,7 +9,6 @@
 <body id="grad1">
 
 <div class="positionall">
-
     <div class="search">
         <div class="box">
             <form name="search">
@@ -69,6 +68,13 @@
         </div>
     </form>
 </div>
+
+<form id="reviewbook" method="get" action="StudentReviewBook/">
+    <input type="text" name="reviewisbn" placeholder="Type in the ISBN of the book you want to review."><br>
+    <input type="number" name="reviewscore" placeholder="Type in the score x/5."><br>
+    <input type="text" name="reviewbox" placeholder="Type in your review."><br>
+    <button type="submit" value="Call Servlet">Post Review</button>
+</form>
 
 <footer>
     <center><img src="img/book.png" width="40" height="40" alt="phone Icon">
