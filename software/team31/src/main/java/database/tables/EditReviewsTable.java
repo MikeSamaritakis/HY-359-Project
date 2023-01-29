@@ -88,7 +88,7 @@ public class EditReviewsTable {
     }
 
 
-    public void createReviewTable() throws SQLException, ClassNotFoundException {
+    public static void createReviewTable() throws SQLException, ClassNotFoundException {
         Connection con = DB_Connection.getConnection();
         Statement stmt = con.createStatement();
         String sql = "CREATE TABLE reviews "
@@ -118,7 +118,7 @@ public class EditReviewsTable {
             Statement stmt = con.createStatement();
 
             String insertQuery = "INSERT INTO "
-                    + " reviews (user_id,isbn,reviewText,reviewScore) "
+                    + " reviews (user_id, isbn,reviewText,reviewScore) "
                     + " VALUES ("
                     + "'" + rev.getUser_id() + "',"
                     + "'" + rev.getIsbn()+ "',"
