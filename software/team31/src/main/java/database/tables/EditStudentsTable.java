@@ -201,13 +201,13 @@ public class EditStudentsTable {
         }
     }
 
-    public static void deleteStudent(String username) throws ClassNotFoundException{
+    public static void deleteStudent(String username1) throws ClassNotFoundException{
         try {
             Connection con = DB_Connection.getConnection();
 
             Statement stmt = con.createStatement();
 
-            String insertQuery = "DELETE FROM students WHERE username = '" + username + "'";
+            String insertQuery = "DELETE FROM students WHERE username = '" + username1 + "'";
             //stmt.execute(table);
             System.out.println(insertQuery);
             stmt.executeUpdate(insertQuery);
