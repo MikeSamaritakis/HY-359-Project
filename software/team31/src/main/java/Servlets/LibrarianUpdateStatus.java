@@ -99,7 +99,7 @@ public class LibrarianUpdateStatus extends HttpServlet {
             }
         }
 
-
+    response.sendRedirect("Librarian.html");
 
     }
 
