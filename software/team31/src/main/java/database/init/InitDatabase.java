@@ -152,7 +152,7 @@ public class InitDatabase {
         System.out.println("Books\n" + jsonDoc + "\n");
 
         //All the Books of a given genre
-        ArrayList<Book> books2 = edt.databaseToBooks("Fantasy");
+        ArrayList<Book> books2 = edt.databaseToBooksbygenre("Fantasy");
         Gson gson3 = new Gson();
         JsonArray jsonDoc2 = gson3.toJsonTree(books2).getAsJsonArray();
         System.out.println("Books of Fantasy\n" + jsonDoc2 + "\n");
