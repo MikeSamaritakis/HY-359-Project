@@ -7,10 +7,60 @@
 </head>
 <body id="grad1">
 
+<div clas="positionall3">
+    <br>
+    <center><h1 class="wt"> Welcome Librarian! </h1> </center><br>
+
+    <center><div class="solid"></div></center><br>
+    <br>
+
+
+    <form id="editlibinfo" method="post" action="Edit">
+        <div class="pst">
+            <div class="container">
+                <div class="card">
+                    <div class="info">
+                        <span class="pfl">Profile</span>
+                        <button type="button" id="savebutton">edit</button>
+                    </div>
+                    <div class="forms" style="display:none" id="editform">
+                        <div class="inputs">
+                            <span>First Name :</span>
+                            <input type="text" readonly value="" name="editfirstnamel" size="15" minlength="3" maxlength="30">
+                        </div>
+                        <div class="inputs">
+                            <span>Last Name :</span>
+                            <input type="text" readonly value="" name="editlastnamel" size="15" minlength="3" maxlength="30">
+                        </div>
+                        <div class="inputs"> <span>Email :</span>
+                            <input type="text" readonly value="" name="editemaill">
+                        </div>
+                        <div class="inputs">
+                            <span>UserName :</span>
+                            <input type="text" readonly value="" name="editusernamel" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" minlength="8">
+                        </div>
+                        <div class="inputs">
+                            <span>PassWord :</span>
+                            <input type = "password" name="editpasswordl" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" minlength="8" maxlength="12" value = "">
+                            <br>
+                            <label class="txt">Show Password :</label>
+                            <input id="check" type="checkbox" onclick="ShowPass1()" class="box2">
+                        </div>
+                        <center>
+                            <button type="submit" id="save" class="btn" value="Call Servlet">Update</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
 <div class="positionall">
 
     <div class="search">
-        <form id="newbook" method="get" action="/LibrarianAddBook"><br>
+        <form id="newbook" method="get" action="AddBook/"><br>
 
         <label class="txtedit"> Add book isbn :</label><p>
         <input class="edit" type = "text" placeholder="ISBN" name="newisbn" id="newisbn"><br>
@@ -43,10 +93,9 @@
     </div>
 </div>
 
-<div class="positionall">
+<div class="positionall2">
     <form id="ViewUsers" method="get" action="AdminOverview/">
         <center style="padding-top: 3%;">
-            <div class="align">
                 <div class="custom-select" style="width:200px;">
                     <select>
                         <option value="0">Book's Availability</option>
@@ -54,61 +103,11 @@
                         <option value="2">Unavailable</option>
                     </select>
                 </div>
-            </div>
         </center>
     </form>
 </div>
 
-    <br>
-    <center><h1 class="wt"> Welcome Librarian! </h1> </center><br>
 
-    <center><div class="solid"></div></center><br>
-    <br>
-
-    <div clas="positionall">
-    <form id="editlibinfo" method="post" action="Edit">
-    <div class="pst">
-        <div class="container">
-            <div class="card">
-                <div class="info">
-                    <span class="pfl">Profile</span>
-                    <button type="button" id="savebutton">edit</button>
-                </div>
-                <div class="forms" style="display:none" id="editform">
-                    <div class="inputs">
-                        <span>First Name :</span>
-                        <input type="text" readonly value="" name="editfirstnamel" size="15" minlength="3" maxlength="30">
-                    </div>
-                    <div class="inputs">
-                        <span>Last Name :</span>
-                        <input type="text" readonly value="" name="editlastnamel" size="15" minlength="3" maxlength="30">
-                    </div>
-                    <div class="inputs"> <span>Email :</span>
-                        <input type="text" readonly value="" name="editemaill">
-                    </div>
-                    <div class="inputs">
-                        <span>UserName :</span>
-                        <input type="text" readonly value="" name="editusernamel" size="15" pattern="(?=.*[a-z,A-Z]).{8,}" minlength="8">
-                    </div>
-                    <div class="inputs">
-                        <span>PassWord :</span>
-                        <input type = "password" name="editpasswordl" id="myInput1" pattern="(?=.*[0-9])(?=.*[a-z,A-Z])(?=.*[!-/,:-@,[-`,{-~]).{8,12}" minlength="8" maxlength="12" value = "">
-                        <br>
-                        <label class="txt">Show Password :</label>
-                        <input id="check" type="checkbox" onclick="ShowPass1()" class="box2">
-                    </div>
-                    <center>
-                        <button type="submit" id="save" class="btn" value="Call Servlet">Update</button>
-                    </center>
-                </div>
-            </div>
-        </div>
-    </div>
-    </form>
-
-</div>
-
-</div>
 
 <footer>
     <center><img src="img/book.png" width="40" height="40" alt="phone Icon">

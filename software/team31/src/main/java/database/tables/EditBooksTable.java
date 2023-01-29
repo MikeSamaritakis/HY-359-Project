@@ -148,7 +148,7 @@ public class EditBooksTable {
      *
      * @throws ClassNotFoundException
      */
-    public void createNewBook(Book bt) throws ClassNotFoundException {
+    public static void createNewBook(Book bt) throws ClassNotFoundException {
         try {
             Connection con = DB_Connection.getConnection();
 

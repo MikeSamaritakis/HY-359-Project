@@ -12,16 +12,15 @@ import java.io.IOException;
 public class LibrarianAddBook extends HttpServlet {
     private static final long serialVersionUID = 1L; //https://www.codejava.net/coding/java-servlet-and-jsp-hello-world-tutorial-with-eclipse-maven-and-apache-tomcat
 
-    public LibrarianAddBook(){
-        super();
-    }
+//    public LibrarianAddBook(){
+//        super();
+//    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        Librarian can add a book to the library.
         Book book = new Book();
-        EditBooksTable ebook = new EditBooksTable();
-
+        String page = "";
         String isbn = request.getParameter("newisbn");
         book.setIsbn(isbn);
         String title = request.getParameter("newtitle");
@@ -40,11 +39,13 @@ public class LibrarianAddBook extends HttpServlet {
         book.setPublicationyear(Integer.parseInt(publicationyear));
 
         try {
-            ebook.createNewBook(book);
+            EditBooksTable.createNewBook(book);
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-
+        page = "Librarian.html";
+        RequestDispatcher dd =request.getRequestDispatcher(page);
+        dd.forward(request,response);
     }
 
     @Override
