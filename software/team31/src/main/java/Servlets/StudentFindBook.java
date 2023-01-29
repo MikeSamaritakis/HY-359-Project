@@ -42,7 +42,7 @@ public class StudentFindBook extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
+
         String page="Student2.html";
         String isbn = request.getParameter("txt");
         Book grepolis = new Book();
@@ -54,8 +54,7 @@ public class StudentFindBook extends HttpServlet {
             throw new RuntimeException(e);
         }
         if (grepolis != null){
-            RequestDispatcher dd =request.getRequestDispatcher(page);
-            dd.forward(request,response);
+            response.sendRedirect("Student2.html");
         }
 
 
